@@ -1,0 +1,65 @@
+﻿@model GesStaDemo.Models.Entities.Notation
+
+@{
+    ViewBag.Title = "Détails";
+    
+}
+
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Note du rapport")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotRapp)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Observation")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ObserEval)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date de notation")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateNot)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Stagiaire")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Maître de stage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodMS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodRapp)
+        </dt>
+
+        <dd>
+            @Html.DisplayName("Rapport")
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Index","Rapport")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</p>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Direction>
+
+@{
+    ViewBag.Title = "Consultation des directions";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+<h2>Liste des directions</h2>
+<div>
+    <a href="@Url.Action("Liste","Direction")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Libellé")
+        </th>
+        <th>
+            @Html.DisplayName("Action")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LibDir)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ActDir)
+            </td>
+            <td>
+                <a href="@Url.Action("Edit","Direction", new { id = item.CodDir})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+                <a href="@Url.Action("Details","Direction", new { id = item.CodDir})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+                <a href="@Url.Action("Delete","Direction", new { id = item.CodDir})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+    }
+
+</table>

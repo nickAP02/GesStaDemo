@@ -11,13 +11,23 @@ namespace GesStaDemo.Models.EntitiesConfigurations
     {
         public AvoirPourConfigurations()
         {
+            
             ToTable("AvoirPour");
+            HasKey(a => a.Id);
             Property(a => a.DateSup)
-                .HasColumnName("Date_Sup")
-                .HasColumnType("datetime")
+                .HasColumnName("DateSup")
+                .HasColumnType("date")
                 .IsRequired();
-            HasMany(a => a.Stagiaires);
-            HasMany(a => a.Superviseurs);
+            HasRequired(s => s.Stagiaire)
+                .WithMany(a => a.AvoirPours)
+                .HasForeignKey(s => s.AvoirPourSup)
+                .WillCascadeOnDelete(false);
+            HasRequired(s => s.Superviseur)
+                .WithMany(a => a.AvoirPours)
+                .HasForeignKey(s => s.AvoirPourSta)
+                .WillCascadeOnDelete(false);
+
+
         }
     }
 }

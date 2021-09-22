@@ -1,0 +1,39 @@
+﻿@model GesStaDemo.Models.Entities.Remuneration
+
+@{
+    ViewBag.Title = "Détails";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RegleMens)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RegleMens)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateRemiz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRemiz)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Stagiaire.NomSta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Stagiaire.NomSta)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Index","Remuneration")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</p>

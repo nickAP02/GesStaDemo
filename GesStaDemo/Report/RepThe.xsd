@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RepThe" targetNamespace="http://tempuri.org/RepThe.xsd" xmlns:mstns="http://tempuri.org/RepThe.xsd" xmlns="http://tempuri.org/RepThe.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GesStaDbContext" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GesStaDbContext (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GesStaDbContext.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReportThemeTableAdapter" GeneratorDataComponentClassName="ReportThemeTableAdapter" Name="ReportTheme" UserDataComponentName="ReportThemeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GesStaDbContext (Web.config)" DbObjectName="GesSta.dbo.ReportTheme" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Theme, Maitre, Objectifs, Date_Attribution, Stagiaire FROM dbo.ReportTheme</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Theme" DataSetColumn="Theme" />
+              <Mapping SourceColumn="Maitre" DataSetColumn="Maitre" />
+              <Mapping SourceColumn="Objectifs" DataSetColumn="Objectifs" />
+              <Mapping SourceColumn="Date_Attribution" DataSetColumn="Date_Attribution" />
+              <Mapping SourceColumn="Stagiaire" DataSetColumn="Stagiaire" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RepThe" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RepThe" msprop:Generator_UserDSName="RepThe">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportTheme" msprop:Generator_TableClassName="ReportThemeDataTable" msprop:Generator_TableVarName="tableReportTheme" msprop:Generator_TablePropName="ReportTheme" msprop:Generator_RowDeletingName="ReportThemeRowDeleting" msprop:Generator_RowChangingName="ReportThemeRowChanging" msprop:Generator_RowEvHandlerName="ReportThemeRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportThemeRowDeleted" msprop:Generator_UserTableName="ReportTheme" msprop:Generator_RowChangedName="ReportThemeRowChanged" msprop:Generator_RowEvArgName="ReportThemeRowChangeEvent" msprop:Generator_RowClassName="ReportThemeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Theme" msprop:Generator_ColumnVarNameInTable="columnTheme" msprop:Generator_ColumnPropNameInRow="Theme" msprop:Generator_ColumnPropNameInTable="ThemeColumn" msprop:Generator_UserColumnName="Theme">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Maitre" msprop:Generator_ColumnVarNameInTable="columnMaitre" msprop:Generator_ColumnPropNameInRow="Maitre" msprop:Generator_ColumnPropNameInTable="MaitreColumn" msprop:Generator_UserColumnName="Maitre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Objectifs" msprop:Generator_ColumnVarNameInTable="columnObjectifs" msprop:Generator_ColumnPropNameInRow="Objectifs" msprop:Generator_ColumnPropNameInTable="ObjectifsColumn" msprop:Generator_UserColumnName="Objectifs">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_Attribution" msprop:Generator_ColumnVarNameInTable="columnDate_Attribution" msprop:Generator_ColumnPropNameInRow="Date_Attribution" msprop:Generator_ColumnPropNameInTable="Date_AttributionColumn" msprop:Generator_UserColumnName="Date_Attribution" type="xs:dateTime" />
+              <xs:element name="Stagiaire" msprop:Generator_ColumnVarNameInTable="columnStagiaire" msprop:Generator_ColumnPropNameInRow="Stagiaire" msprop:Generator_ColumnPropNameInTable="StagiaireColumn" msprop:Generator_UserColumnName="Stagiaire" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ReportTheme" />
+      <xs:field xpath="mstns:Stagiaire" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "172d1xz",
+  "CachePdfKey": "172d1xz/172d1xz-npq31v.pdf",
+  "CacheXpzKey": "172d1xz/172d1xz-ultb2b.xpz",
+  "CacheInfoKey": "172d1xz/172d1xz-ultb2b.json",
+  "CacheCopyKey": null,
+  "Document": "PageDeGarde.pdf",
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": "~\\CV",
+  "DocumentFileName": "PageDeGarde.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "172d1xz",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": null
+}

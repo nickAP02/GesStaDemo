@@ -11,8 +11,11 @@ namespace GesStaDemo.Models.EntitiesConfigurations
     {
         public NotationConfigurations()
         {
+            HasKey(n => n.IdNot);
+            ToTable("Notation");
             Property(m => m.NotRapp)
               .HasColumnName("Note")
+              .HasColumnType("int")
               .IsRequired();
             Property(m => m.ObserEval)
                .HasColumnName("Observation")
@@ -20,11 +23,19 @@ namespace GesStaDemo.Models.EntitiesConfigurations
                .HasMaxLength(40)
                .IsRequired();
             Property(m => m.DateNot)
-              .HasColumnName("Date_Notation")
+              .HasColumnName("DateNotation")
+              .HasColumnType("date")
               .IsRequired();
-            HasMany(m => m.MaitreDeStages);
-            HasMany(m => m.Rapports);
-            HasMany(m => m.Stagiaires);
+            HasRequired(m => m.MaitreDeStage)
+                .WithMany(n => n.Notations)
+                .HasForeignKey(n => n.CodMS)
+                .WillCascadeOnDelete();
+            HasRequired(s => s.Stagiaire)
+               .WithMany(n => n.Notations)
+               .HasForeignKey(s => s.IdSta);
+            HasRequired(r => r.Rapport)
+                .WithMany(n => n.Notations)
+                .HasForeignKey(r => r.CodRapp);
         }
     }
 }

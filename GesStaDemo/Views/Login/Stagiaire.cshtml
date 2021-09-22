@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Espace stagiaire";
+    Layout = "~/Views/Login/_StagiaireLayout.cshtml";
+}
+<div class="container body-content">
+    <h2>Rapport</h2>
+    <div class="dropdown">
+        <ul class="submenu-item">
+            <li><i class='fas fa-plus'></i> @Html.ActionLink("Ajouter un rapport", "Create", "Rapport")</li>
+            <!--<li><i class='fas fa-archive'></i> @Html.ActionLink("Liste des rapports", "Index", "Rapport")</li>-->
+        </ul>
+
+    </div>
+</div>
+<div class="container body-content">
+    <h2>Matériel utlisés</h2>
+    <div class="dropdown">
+        <ul class="submenu-item">
+            <li> <i class='fas fa-plus'></i>@Html.ActionLink("Ajouter un matériel", "Create", "Utiliser")</li>
+            <li> <i class='fas fa-laptop'></i>@Html.ActionLink("Liste des matériels", "Index", "Utiliser")</li>
+        </ul>
+
+    </div>
+</div>
+<div class="container body-content">
+    <h2>Renouvellement</h2>
+    <a href="@Url.Action("Renouvellement","Stagiaire")" class="btn btn-primary" onclick="myFunc()">Demander renouvellement</a>
+    <!--<button class="btn btn-primary" id="renouv" onclick = "myFunc()" value="Demander renouvellement" type="submit"></button>-->
+</div>
+<style>
+    .submenu-item a {
+        text-decoration: none;
+        padding-left:20px;
+    }
+</style>
+<script>
+    function myFunc() {
+        document.getElementById('renouv');
+    }
+    new Swal.fire
+        ({
+            icon: 'success',
+            title: 'Envoi',
+            text: 'Votre demande est envoyée'
+        })
+</script>

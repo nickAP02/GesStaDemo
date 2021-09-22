@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "ga57yi",
+  "CachePdfKey": "ga57yi/ga57yi-npq31v.pdf",
+  "CacheXpzKey": "ga57yi/ga57yi-4kii5i.xpz",
+  "CacheInfoKey": "ga57yi/ga57yi-4kii5i.json",
+  "CacheCopyKey": "ga57yi/pep0hf.pdf",
+  "Document": null,
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": null,
+  "DocumentFileName": "CH4_Gestion des claviers.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "ga57yi",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

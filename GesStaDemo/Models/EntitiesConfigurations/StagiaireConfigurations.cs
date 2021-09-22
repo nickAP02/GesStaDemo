@@ -11,55 +11,71 @@ namespace GesStaDemo.Models.EntitiesConfigurations
    {
         public StagiaireConfigurations()
         {
-            Property(s => s.IdSta)
-               .HasColumnName("Id_Sta")
+            ToTable("Stagiaire");
+            HasKey(k => k.IdSta);
+            Property(s=>s.IdSta)
+               .HasColumnName("IdSta")
                .IsRequired();
             Property(s => s.NomSta)
-               .HasColumnName("Nom_Sta")
+               .HasColumnName("Nom")
                .HasColumnType("varchar")
                .HasMaxLength(25)
                .IsRequired();
             Property(s => s.PrenSta)
-               .HasColumnName("Prenom_Sta")
+               .HasColumnName("Prénom")
                .HasColumnType("varchar")
                .HasMaxLength(25)
                .IsRequired();
             Property(s => s.TelSta)
-                .HasColumnName("Telephone_Sta")
+                .HasColumnName("Téléphone")
                 .HasColumnType("varchar")
-                .HasMaxLength(7)
+                .HasMaxLength(8)
                 .IsRequired();
             Property(s => s.AdrSta)
-              .HasColumnName("Adresse_Sta")
+              .HasColumnName("Email")
               .HasColumnType("varchar")
-              .HasMaxLength(100)
+              .HasMaxLength(50)
               .IsRequired();
+            Property(s => s.DebutStage)
+                .HasColumnName("DebutStage")
+                .HasColumnType("date")
+                .IsRequired();
             Property(s => s.FinStage)
-              .HasColumnName("Prenom_Sta")
+              .HasColumnName("FinStage")
+               .HasColumnType("date")
               .IsRequired();
             Property(s => s.NbRenouvel)
-              .HasColumnName("Nb_Renouvel")
+              .HasColumnName("NbRenouvel")
               .IsRequired();
             Property(s => s.Somm)
               .HasColumnName("Somme")
+              .HasColumnType("float")
               .IsRequired();
             Property(s => s.NatSta)
-               .HasColumnName("Nationalite_Sta")
+               .HasColumnName("Nationalite")
                .HasColumnType("varchar")
                .HasMaxLength(25)
                .IsRequired();
             Property(s => s.SexSta)
-               .HasColumnName("Sexe_Sta")
-               .HasColumnType("char")
+               .HasColumnName("Sexe")
+               .HasColumnType("varchar")
+               .HasMaxLength(1)
                .IsRequired();
             Property(s => s.DateNaisSta)
-              .HasColumnName("DateNais_Sta")
+              .HasColumnName("DateNaisSta")
+              .HasColumnType("date")
               .IsRequired();
-            HasMany(s => s.Notations);
-            HasMany(s => s.Themes);
-            HasMany(s => s.Formations);
-            HasMany(s => s.NoteDeServices);
-            HasMany(s => s.Remunerations);
+            HasRequired(s => s.Provenance)
+                .WithMany(s => s.Stagiaires)
+                .HasForeignKey(s => s.IdProv);
+            //HasMany(s => s.Utilisers);
+            HasRequired(u => u.Utilisateur)
+                .WithMany(s => s.Stagiaires)
+                .HasForeignKey(u => u.UtilId)
+                .WillCascadeOnDelete(false);
+
+
+          
         }
    }
 }

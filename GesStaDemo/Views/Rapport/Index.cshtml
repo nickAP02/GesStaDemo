@@ -1,0 +1,46 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Rapport>
+
+@{
+    ViewBag.Title = "Consultation des rapports";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Liste des rapports</h2>
+<div>
+    <a href="@Url.Action("Imprimer","Rapport")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nom du rapport")
+        </th>
+        <th>
+            @Html.DisplayName("Tâches")
+        </th>
+        <th>
+            @Html.DisplayName("Date de présentation")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomRapp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Taches)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatePresentat)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","Rapport", new { id = item.CodRapp})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","Rapport", new { id =item.CodRapp})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","Rapport", new { id = item.CodRapp})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

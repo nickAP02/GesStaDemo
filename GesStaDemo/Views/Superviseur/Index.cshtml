@@ -1,0 +1,58 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Superviseur>
+
+@{
+    ViewBag.Title = "Consultation des superviseurs";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Liste des superviseurs</h2>
+<div>
+    <a href="@Url.Action("Imprimer","Superviseur")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nom d'utilisateur")
+        </th>
+        <th>
+            @Html.DisplayName("Nom")
+        </th>
+        <th>
+            @Html.DisplayName("Prénom")
+        </th>
+        <th>
+            @Html.DisplayName("Email")
+        </th>
+        <th>
+            @Html.DisplayName("Numero de téléphone")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Utilisateur.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomSup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrenSup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdrSup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelSup)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","Superviseur", new { id = item.IdSup})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","Superviseur", new { id =item.IdSup})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","Superviseur", new { id = item.IdSup})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,115 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Demande>
+
+@{
+    GesStaDbContext db = new GesStaDbContext();
+    ViewBag.Title = "Demandes";
+    ViewBag.Rech = db.Database.ExecuteSqlCommand("select * from Demande");
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+@using(Html.BeginForm("Demandes","Admin",FormMethod.Get))
+{ 
+<link href="~/Content/admin.css" type="text/css"/>
+<div id="main" class="main">
+
+    <h2>Liste des demandes</h2>
+
+    <div>
+        <a href="@Url.Action("ImprimerDemandes","Admin")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+    </div>
+    <div>
+        <input type="search" name="Rech" />
+        <input type="submit" value="Rechercher" class="btn-default">
+    </div>
+ }
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("Nom")
+            </th>
+            <th>
+                @Html.DisplayName("Prénom")
+            </th>
+            <th>
+                @Html.DisplayName("Sexe")
+            </th>
+            <th>
+                @Html.DisplayName("Date de naissance")
+            </th>
+            <th>
+                @Html.DisplayName("Nationalité")
+            </th>
+            <th>
+                @Html.DisplayName("Téléphone")
+            </th>
+            <th>
+                @Html.DisplayName("Email")
+            </th>
+            <th>
+                @Html.DisplayName("Offre")
+            </th>
+            <th>
+                @Html.DisplayName("CV")
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Prenom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sexe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateNaissance)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nationalite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Telephone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TypeDeStage)
+                </td>
+                <td>
+                    <span id="popuptext1" style="display:none;">Voir CV</span>
+                    <a href="@Url.Action("Voir","Admin",new { id = item.IdDem })" class="btn btn-primary" onmouseover="myFunction()">
+                        <i class="fa fa-file-pdf"></i>
+                    </a>
+                </td>
+                <td>
+                    <span id="popuptext2" style="display:none;"> Accepter</span>
+                    <a href="@Url.Action("Valider", "Admin", new { id = item.IdDem })" class="btn btn-success" onmouseover="myFunction()">
+                        <i class="fa fa-check"></i>
+                    </a>
+                </td>
+                <td>
+                    <span id="popuptext3" style="display:none;">Refuser</span>
+                    <a href="@Url.Action("Refuser", "Admin", new { id = item.IdDem })" class="btn btn-warning" onmouseover="myFunction()">
+                        <i class="fa fa-times"></i>
+                    </a>
+                </td>
+            </tr>
+
+        }
+
+    </table>
+</div>
+<!--<script>
+    function myFunction() {
+        var popup = document.getElementById("popuptext1"); 
+        popup.classList.toggle("show");
+        var popup1 = document.getElementById("popuptext2");
+        popup1.classList.toggle("show");
+        var popup3 = document.getElementById("popuptext3");
+        popup3 = document.getElementById("show");
+    }
+</script>-->

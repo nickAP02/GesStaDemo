@@ -1,0 +1,66 @@
+﻿@model  GesStaDemo.Models.Entities.Valider
+@{
+    ViewBag.Title = "Valider";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Valider</h2>
+@using (Html.BeginForm("Valider", "Admin", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <fieldset>
+        <legend> Identifiants de connexion</legend>
+
+        <div class="form-group">
+            @Html.Label("Nom d'utilisateur")
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Utilisateur.Login, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Utilisateur.Login, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Définissez le mot de passe")
+            <div class="col-md-10">
+                @Html.PasswordFor(model => model.Utilisateur.Passwd, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Utilisateur.Passwd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Confirmez le mot de passe")
+            <div class="col-md-10">
+                <input type="password" />
+                @Html.ValidationMessageFor(model => model.Utilisateur.Passwd, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Photo de profil")
+            <div class="col-md-10">
+                <input name="Image" accept=".jpg" type="file" />
+               
+                @Html.ValidationMessageFor(model => model.Utilisateur.Photo, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </fieldset>
+    <!--<fieldset>
+        <legend>Droit</legend>
+
+        <div class="form-group">
+            @Html.Label("Utilisateur", htmlAttributes: new { @class = "control-label col-md-2", style = "padding-left:10px;" })
+            <div class="col-md-10">
+                @Html.Editor("UtilId", "UtilId", new {htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Droit.UtilId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Profil", htmlAttributes: new { @class = "control-label col-md-2", style = "padding-left:10px;" })
+            <div class="col-md-10">
+                @Html.DropDownList("ProfilId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Droit.ProfilId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+    </fieldset>-->
+    <div class="form-group">
+        <input type="submit" value="Valider" class="btn btn-primary" />
+    </div>
+
+}

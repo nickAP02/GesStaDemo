@@ -1,0 +1,40 @@
+﻿@model GesStaDemo.Models.Entities.SortirDe
+
+@{
+    ViewBag.Title = "Suppression";
+    Layout = "~/Views/Login/_StagiaireLayout.cshtml";
+}
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Date de provenance")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatePro)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Niveaud d'étude")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NivoEtude)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    <a href="" type="reset" value="" class="btn btn-default"><i class="fa fa-redo"></i></a>
+    <a href="@Url.Action("Index","SortirDe")" type="submit" value="Ajouter" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</div>
+    }
+</div>

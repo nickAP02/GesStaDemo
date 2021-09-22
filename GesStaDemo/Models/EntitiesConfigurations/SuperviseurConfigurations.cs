@@ -12,29 +12,32 @@ namespace GesStaDemo.Models.EntitiesConfigurations
       public SuperviseurConfigurations()
       {
             ToTable("Superviseur");
-            Property(s => s.IdSup)
-                .HasColumnName("Id_Sup")
-                .IsRequired();
+            HasKey(k => k.IdSup);
             Property(s => s.NomSup)
-                .HasColumnName("Nom_Sup")
+                .HasColumnName("Nom")
                 .HasColumnType("varchar")
                 .HasMaxLength(25)
                 .IsRequired();
             Property(s => s.PrenSup)
-                .HasColumnName("Prenom_Sup")
+                .HasColumnName("Prenom")
                 .HasColumnType("varchar")
                 .HasMaxLength(25)
                 .IsRequired();
             Property(s => s.AdrSup)
-                .HasColumnName("Adresse_Sup")
+                .HasColumnName("Email")
                 .HasColumnType("varchar")
-                .HasMaxLength(100)
+                .HasMaxLength(50)
                 .IsRequired();
             Property(s => s.TelSup)
-                .HasColumnName("Telephone_Sup")
-                .HasColumnType("varchar")
-                .HasMaxLength(7)
+                .HasColumnName("Telephone")
+                 .HasColumnType("varchar")
+                .HasMaxLength(8)
                 .IsRequired();
+            HasMany(s => s.AvoirPours);
+            HasRequired(u => u.Utilisateur)
+                 .WithMany(s => s.Superviseurs)
+                 .HasForeignKey(u => u.UtilId)
+                 .WillCascadeOnDelete(false); 
         }
   }
 }

@@ -1,0 +1,41 @@
+﻿@model GesStaDemo.Models.Entities.Rapport
+
+@{
+    ViewBag.Title = "Détails du rapport";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nom du rapport")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomRapp)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Tâches")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Taches)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date de présentation")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatePresentat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Index","Rapport")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</p>

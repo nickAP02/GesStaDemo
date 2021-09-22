@@ -1,0 +1,13 @@
+﻿@model DocumentViewer
+@{
+    ViewBag.Title = "Voir";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<div class="main">
+    @section LayoutHead {
+        @this.RenderHead(Model)
+    }
+
+    @this.RenderBody(Model)
+</div>

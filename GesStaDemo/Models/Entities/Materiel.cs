@@ -11,6 +11,7 @@ namespace GesStaDemo.Models.Entities
         public string LibMat { get; set; }
         public int QuantMat { get; set; }
         public string Caracteristik { get; set; }
-        
+        public ICollection<Utiliser> Utilisers { get; set; }
+        public int Disponible { get; set; }
     }
 }

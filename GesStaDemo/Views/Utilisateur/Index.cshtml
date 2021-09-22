@@ -1,0 +1,45 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Utilisateur>
+
+@{
+    ViewBag.Title = "Consultation des utilisateurs";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Liste des utilisateurs</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Nom d'utilisateur")
+        </th>
+        <th>
+            @Html.DisplayName("Mot de passe")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Passwd)
+        </td>
+        <td>
+           <img src="~/Images/@item.Photo" width="50" height="50" alt="Photo de profil"/>
+            <br />
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","Utilisateur", new { id = item.UtilId})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","Utilisateur", new { id =item.UtilId})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","Utilisateur", new { id = item.UtilId})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

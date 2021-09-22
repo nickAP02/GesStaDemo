@@ -1,0 +1,40 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.SortirDe>
+
+@{
+    ViewBag.Title = "List des sorties";
+    Layout = "~/Views/Login/_StagiaireLayout.cshtml";
+}
+
+<h2></h2>
+
+<div>
+    <a href="@Url.Action("Imprimer","SortirDe")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DatePro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NivoEtude)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DatePro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NivoEtude)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

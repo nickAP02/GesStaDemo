@@ -1,0 +1,42 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.AvoirPour>
+
+@{
+    ViewBag.Title = "Liste des supervisions";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Stagiaire")
+        </th>
+        <th>
+            @Html.DisplayName("Superviseur")
+        </th>
+        <th>
+            @Html.DisplayName("Date de supervision")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stagiaire.NomSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Superviseur.NomSup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateSup)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","AvoirPour", new { id = item.Id})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","AvoirPour", new { id =item.Id})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","AvoirPour", new { id = item.Id})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

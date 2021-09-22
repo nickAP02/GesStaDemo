@@ -1,0 +1,194 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Offre>
+
+@{
+    ViewBag.Title = "Accueil";
+    Layout = "~/Views/Home/_LayoutPage.cshtml";
+    GesStaDbContext db = new GesStaDbContext();
+}
+<style>
+    .container-fluid {
+        width: 800px;
+        height: 100%;
+    }
+     .carousel slide {
+    height: 300px;
+    }
+ 
+   .item {
+        width: 100%; height: 300px;
+      
+    }
+
+    h2{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    .card-body {
+        padding-left: 1px;
+        height: 100%;
+    }
+
+    .card-img-top {
+        width: 220px;
+        height: 220px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card-text {
+        padding-left: 10px;
+        color: whitesmoke;
+        text-align: left;
+        font-size: 20px;
+       
+    }
+
+    .card {
+        margin: 20px;
+        background-color: blueviolet;
+        display: grid;
+        border: 5px groove blueviolet;
+        width: 229px;
+        /*height: 400px;*/
+        height:100%;
+    }
+</style>
+<div class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="item active">
+            <img id="cazza1" src="~/Image/img_stage_de_memoire.jpg" alt="First slide" />
+        </div>
+ 
+        <div class="item">
+            <img id="cazza2" src="~/Image/img6.jpg" alt="Second slide">
+        </div>
+        <div class="item">
+            <img id="cazza2" src="~/Image/img3.jpg" alt="Third slide">
+        </div>
+        <div class="item">
+            <img id="cazza2" src="~/Image/img7.jpg" alt="Fourth slide">
+        </div>
+        <div class="item">
+            <img id="cazza3" src="~/Image/img9.jpg" alt="Fifth slide">
+        </div>
+    </div>
+</div>
+
+<h2>Nos offres</h2>
+@using(db)
+{ 
+<div class="container-fluid">
+    @foreach (var item in Model)
+    {
+        if (item.LibOffre == "Stage de mémoire")
+        {
+            if (item.Remunerer == true)
+            {
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="~/Image/img_stage_de_memoire.jpg" width="50" height="30" alt="Card image cap" />
+                        <div class="card-body">
+                            <p class="card-text">
+                                @item.LibOffre rémunéré
+                            </p>
+                            <p class="card-text">@item.DebutStage.ToShortDateString()</p>
+                            <p class="card-text">@item.FinStage.ToShortDateString()</p>
+
+                        </div>
+                        @Html.ActionLink(
+                                linkText: "Postuler",
+                                actionName: "Create",
+                                controllerName: "Demande",
+                                routeValues: new { @id = item.Demandes },
+                                htmlAttributes: new { @class = "btn btn-primary" }
+                                )
+
+                        <!--<a href="@Url.Action("Create", "Demande")" class="btn btn-primary">Postuler</a>-->
+                    </div>
+                </div>
+
+            }
+            else
+            {
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="~/Image/img_stage_de_memoire.jpg" width="50" height="30" alt="Card image cap" />
+                        <div class="card-body">
+                            <p class="card-text">
+                                @item.LibOffre
+                            </p>
+                            <p class="card-text">@item.DebutStage.ToShortDateString()</p>
+                            <p class="card-text">@item.FinStage.ToShortDateString()</p>
+
+                        </div>
+                        @Html.ActionLink(
+                                linkText: "Postuler",
+                                actionName: "Create",
+                                controllerName: "Demande",
+                                routeValues: new { @id = item.Demandes },
+                                htmlAttributes: new { @class = "btn btn-primary" }
+                                )
+
+                        <!--<a href="@Url.Action("Create", "Demande")" class="btn btn-primary">Postuler</a>-->
+                    </div>
+                </div>
+            }
+
+        }
+        else
+        {
+            if (item.Remunerer == false)
+            {
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="~/Image/img_stage_de_perfectionnement.jpg" width="50" height="30" alt="Card image cap" />
+                        <div class="card-body">
+                            <p class="card-text">
+                                @item.LibOffre
+                            </p>
+                            <p class="card-text">@item.DebutStage.ToShortDateString()</p>
+                            <p class="card-text">@item.FinStage.ToShortDateString()</p>
+
+                        </div>
+                        @Html.ActionLink(
+                               linkText: "Postuler",
+                               actionName: "Create",
+                               controllerName: "Demande",
+                               routeValues: new { @id = item.Demandes },
+                               htmlAttributes: new { @class = "btn btn-primary" }
+                               )
+                        <!--<a href="@Url.Action("Create", "Demande")" class="btn btn-primary" style="">Postuler</a>-->
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="col-md-4">
+                    <div class="card">
+                        <img class="card-img-top" src="~/Image/img_stage_de_perfectionnement.jpg" width="50" height="30" alt="Card image cap" />
+                        <div class="card-body">
+                            <p class="card-text">
+                                @item.LibOffre rémunéré
+                            </p>
+                            <p class="card-text">@item.DebutStage.ToShortDateString()</p>
+                            <p class="card-text">@item.FinStage.ToShortDateString()</p>
+
+                        </div>
+                        @Html.ActionLink(
+                               linkText: "Postuler",
+                               actionName: "Create",
+                               controllerName: "Demande",
+                               routeValues: new { @id = item.Demandes },
+                               htmlAttributes: new { @class = "btn btn-primary" }
+                               )
+                        <!--<a href="@Url.Action("Create", "Demande")" class="btn btn-primary" style="">Postuler</a>-->
+                    </div>
+                </div>
+            }
+
+        }
+    }
+</div>
+}
+
+

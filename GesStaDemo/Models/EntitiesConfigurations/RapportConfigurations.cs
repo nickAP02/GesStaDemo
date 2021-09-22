@@ -12,13 +12,14 @@ namespace GesStaDemo.Models.EntitiesConfigurations
      public RapportConfigurations()
      {
          ToTable("Rapport");
+            HasKey(r => r.CodRapp);
          Property(r => r.CodRapp)
-             .HasColumnName("Code_Rapp")
+             .HasColumnName("CodRapp")
              .HasColumnType("varchar")
              .HasMaxLength(18)
              .IsRequired();
             Property(r => r.NomRapp)
-                .HasColumnName("Nom_Rapp")
+                .HasColumnName("NomRapp")
                 .HasColumnType("varchar")
                 .HasMaxLength(40)
                 .IsRequired();
@@ -28,10 +29,10 @@ namespace GesStaDemo.Models.EntitiesConfigurations
                 .HasMaxLength(150)
                 .IsRequired();
             Property(r => r.DatePresentat)
-                .HasColumnName("Date_presentat")
+                .HasColumnName("DatePresentat")
                 .HasColumnType("dateTime")
                 .IsRequired();
-            HasMany(r => r.Notations);
+            //HasMany(r => r.Notations);
         }
    }
 }

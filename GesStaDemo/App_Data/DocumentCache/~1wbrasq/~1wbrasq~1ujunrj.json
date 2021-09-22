@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "1wbrasq",
+  "CachePdfKey": "1wbrasq/1wbrasq-npq31v.pdf",
+  "CacheXpzKey": "1wbrasq/1wbrasq-1ujunrj.xpz",
+  "CacheInfoKey": "1wbrasq/1wbrasq-1ujunrj.json",
+  "CacheCopyKey": "1wbrasq/1w37xjx.pdf",
+  "Document": null,
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": null,
+  "DocumentFileName": "Rapport de stage.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "1wbrasq",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

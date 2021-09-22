@@ -12,15 +12,21 @@ namespace GesStaDemo.Models.EntitiesConfigurations
         public UtiliserConfigurations()
         {
             ToTable("Utiliser");
+            HasKey(u => u.Id);
             Property(u => u.DateEmp)
-                .HasColumnName("Date_Emprunt")
+                .HasColumnName("DateEmp")
                 .IsRequired();
             Property(u => u.DateRet)
-                .HasColumnName("Date_Retrait")
+                .HasColumnName("DateRet")
                 .IsRequired();
-            HasMany(u => u.Materiels);
-            HasMany(u => u.Stagiaires);
-
+            HasRequired(u => u.Materiel)
+                 .WithMany(m => m.Utilisers)
+                 .HasForeignKey(u => u.CodMat)
+                 .WillCascadeOnDelete(true);
+            HasRequired(u => u.Stagiaire)
+                .WithMany(s => s.Utilisers)
+                .HasForeignKey(u => u.IdSta)
+                .WillCascadeOnDelete(true);
         }   
     }
 }

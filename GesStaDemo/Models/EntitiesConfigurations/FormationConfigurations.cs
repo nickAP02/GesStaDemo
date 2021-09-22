@@ -11,12 +11,20 @@ namespace GesStaDemo.Models.EntitiesConfigurations
     {
         public FormationConfigurations()
         {
+            ToTable("Formation");
+            HasKey(f => f.IdFor);
             Property(f => f.DateAffectation)
-               .HasColumnName("Date_affectation")
-               .HasColumnType("datetime")
+               .HasColumnName("DateAffectation")
+               .HasColumnType("date")
                .IsRequired();
-            HasMany(f => f.Sections);
-            HasMany(f => f.Stagiaires);
+            HasRequired(s => s.Section)
+                .WithMany(f => f.Formations)
+                .HasForeignKey(s => s.CodSec)
+                .WillCascadeOnDelete(false);
+            HasRequired(s => s.Stagiaire)
+                .WithMany(f => f.Formations)
+                .HasForeignKey(s => s.IdSta)
+                .WillCascadeOnDelete(false);
         }
     }
 }

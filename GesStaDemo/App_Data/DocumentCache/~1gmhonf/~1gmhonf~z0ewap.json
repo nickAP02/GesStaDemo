@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "1gmhonf",
+  "CachePdfKey": "1gmhonf/1gmhonf-npq31v.pdf",
+  "CacheXpzKey": "1gmhonf/1gmhonf-z0ewap.xpz",
+  "CacheInfoKey": "1gmhonf/1gmhonf-z0ewap.json",
+  "CacheCopyKey": "1gmhonf/q301co.pdf",
+  "Document": null,
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": null,
+  "DocumentFileName": "Channels — Pusher Docs - Channels - Pusher Docs.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "1gmhonf",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

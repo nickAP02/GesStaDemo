@@ -12,39 +12,47 @@ namespace GesStaDemo.Models.EntitiesConfigurations
         public MaitreDeStageConfigurations()
         {
             ToTable("MaitreDeStage");
+            HasKey(m => m.CodMS);
             Property(m => m.CodMS)
-                .HasColumnName("Code_MS")
-                .HasColumnType("varchar")
-                .HasMaxLength(18)
+                .HasColumnName("CodMS")
                 .IsRequired();
             Property(m => m.NomMS)
-                .HasColumnName("Nom_MS")
+                .HasColumnName("Nom")
                 .HasColumnType("varchar")
                 .HasMaxLength(25)
                 .IsRequired();
             Property(m => m.PrenMS)
-                .HasColumnName("Prenom_MS")
+                .HasColumnName("Prenom")
                 .HasColumnType("varchar")
                 .HasMaxLength(25)
                 .IsRequired();
             Property(m => m.TelMS)
-                .HasColumnName("Telephone_MS")
+                .HasColumnName("Telephone")
                 .HasColumnType("varchar")
-                .HasMaxLength(7)
+                .HasMaxLength(8)
                 .IsRequired();
             Property(m => m.AdrMS)
-                .HasColumnName("Adresse_MS")
+                .HasColumnName("Email")
                 .HasColumnType("varchar")
-                .HasMaxLength(100)
+                .HasMaxLength(50)
                 .IsRequired();
             Property(m => m.Fonction)
-                .HasColumnName("Fonction_MS")
+                .HasColumnName("Fonction")
                 .HasColumnType("varchar")
-                .HasMaxLength(100)
+                .HasMaxLength(50)
                 .IsRequired();
-            HasMany(m => m.Sections);
-            HasMany(m => m.Notations);
-            HasMany(m => m.Themes);
+            HasRequired(s => s.Section)
+                .WithMany(m => m.MaitreDeStages)
+                .HasForeignKey(s => s.CodSec)
+                .WillCascadeOnDelete(false);
+            /*HasRequired(n => n.Notation)
+                .WithMany(m => m.MaitreDeStages)
+                .HasForeignKey(n => n.IdNot)
+                 .WillCascadeOnDelete(false);*/
+            HasRequired(u => u.Utilisateur)
+                .WithMany(m => m.MaitreDeStages)
+                .HasForeignKey(u => u.UtilId)
+                .WillCascadeOnDelete(false);
         }
     }
 }

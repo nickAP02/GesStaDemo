@@ -1,0 +1,41 @@
+﻿@model GesStaDemo.Models.Entities.Provenance
+
+@{
+    ViewBag.Title = "Détails";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Libellé de la provenance")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibProv)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Adresse mail")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdrProv)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Ville")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VilleProv)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Index","Provenance")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</p>

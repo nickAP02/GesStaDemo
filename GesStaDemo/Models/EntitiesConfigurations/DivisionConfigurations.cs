@@ -11,22 +11,26 @@ namespace GesStaDemo.Models.EntitiesConfigurations
     {
         public DivisionConfigurations()
         {
+            ToTable("Division");
+            HasKey(d => d.CodDiv);
             Property(d => d.CodDiv)
-               .HasColumnName("Code_division")
+               .HasColumnName("CodDiv")
                .HasColumnType("varchar")
                .HasMaxLength(5)
                .IsRequired();
             Property(d => d.LibDiv)
-               .HasColumnName("Libelle_division")
+               .HasColumnName("LibDiv")
                .HasColumnType("varchar")
                .HasMaxLength(150)
                .IsRequired();
             Property(d => d.ActDiv)
-               .HasColumnName("Action_division")
+               .HasColumnName("Action")
                .HasColumnType("varchar")
                .HasMaxLength(150)
                .IsRequired();
-             
+            HasRequired(d => d.Direction)
+                .WithMany(d => d.Divisions)
+                .HasForeignKey(d => d.CodDir);
         }
     }
 }

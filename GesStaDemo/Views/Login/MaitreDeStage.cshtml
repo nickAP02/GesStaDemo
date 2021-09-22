@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "MaitreDeStage";
+    Layout = "~/Views/Login/_MSLayout.cshtml";
+}
+<div class="container body-content">
+    <h2>Maître de stage</h2>
+    <div class="dropdown">
+        Thème
+        <ul class="submenu-item">
+            <li><i class='fas fa-plus'></i> @Html.ActionLink("Ajouter un thème", "Create", "Theme")</li>
+            <li><i class='fas fa-list'></i>@Html.ActionLink("Liste des thèmes", "Index", "Theme")</li>
+        </ul>
+    </div>
+</div>
+<div class="container body-content">
+    <div class="dropdown">
+        Notation
+        <ul class="submenu-item">
+            <li> <i class='fas fa-plus'></i>@Html.ActionLink("Ajouter une notation", "Create", "Notation")</li>
+            <!--<li><i class='fas fa-list'></i>@Html.ActionLink("Liste des notations", "Index", "Notation")</li>-->
+        </ul>
+    </div>
+</div>
+<style>
+    .submenu-item a {
+        text-decoration: none;
+    }
+</style>

@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - GeSTA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <style>
+        .collapse a {
+            color: blueviolet;
+        }
+    </style>
+    <div class="navbar navbar-expand-sm navbar-fixed-top navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("GeSTA", "Index", "Offre", new { area = "" }, new { @style = "color:#1B5E5E", @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="nav-link active "><a href="@Url.Action("Index", "Offre")"><i class="fa fa-home"></i></a></li>
+                    <li>@Html.ActionLink("Postuler", "Ajouter", "Demande")</li>
+                    <li>@Html.ActionLink("À propos de", "About", "Home")</li>
+                </ul>
+                @{Html.RenderPartial("~/Views/Login/_LoginPartial.cshtml"); }
+                <!--<ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Connexion", "Login", "Home")</li>
+    </ul>-->
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - GeSTA</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

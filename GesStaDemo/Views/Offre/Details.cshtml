@@ -1,0 +1,49 @@
+﻿@model GesStaDemo.Models.Entities.Offre
+
+@{
+    ViewBag.Title = "Détails de l'offre";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Stage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibOffre)
+        </dd>
+        <dt>
+            @Html.DisplayName("Début de stage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DebutStage)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Fin de stage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinStage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remunerer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remunerer)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Liste","Admin")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</p>

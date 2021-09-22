@@ -1,0 +1,27 @@
+﻿@model GesStaDemo.Models.Entities.Profil
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Profil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LibProfil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibProfil)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ProfilId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

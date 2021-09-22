@@ -1,0 +1,57 @@
+﻿@model GesStaDemo.Models.Entities.Offre
+
+@{
+    ViewBag.Title = "Suppression de l'offre";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>@Model.OffreId</h2>
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Stage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibOffre)
+        </dd>
+        <dt>
+            @Html.DisplayName("Début de stage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DebutStage)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Fin de stage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinStage)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Remunerer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Remunerer)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    <a href="" type="reset" value="" class="btn btn-default"><i class="fa fa-redo"></i></a>
+    <a href="@Url.Action("Liste","Admin")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</div>
+    }
+</div>

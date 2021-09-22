@@ -7,8 +7,11 @@ namespace GesStaDemo.Models.Entities
 {
     public class Formation
     {
+        public int  IdFor{ get; set; }
         public DateTime DateAffectation { get; set; }
-        public virtual ICollection<Stagiaire> Stagiaires { get; set; }
-        public virtual ICollection <Section> Sections { get; set; }
+        public int IdSta { get; set; }
+        public virtual Stagiaire Stagiaire { get; set; }
+        public string CodSec { get; set; }
+        public virtual Section Section { get; set; }
     }
 }

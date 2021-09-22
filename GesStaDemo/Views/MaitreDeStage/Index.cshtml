@@ -1,0 +1,70 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.MaitreDeStage>
+
+@{
+    ViewBag.Title = "Consultation des maîtres de stage";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+<div>
+    <a href="@Url.Action("Imprimer","MaitreDeStage")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Section")
+        </th>
+        <th>
+            @Html.DisplayName("Code utilisateur")
+        </th>
+        <th>
+            @Html.DisplayName("Nom")
+        </th>
+        <th>
+            @Html.DisplayName("Prénom")
+        </th>
+        <th>
+            @Html.DisplayName("Téléphone")
+        </th>
+        <th>
+            @Html.DisplayName("Email")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Fonction)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Section.LibSec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Utilisateur.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomMS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrenMS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelMS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdrMS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fonction)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","MaitreDeStage", new { id = item.CodMS})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","MaitreDeStage", new { id = item.CodMS})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","MaitreDeStage", new { id = item.CodMS})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

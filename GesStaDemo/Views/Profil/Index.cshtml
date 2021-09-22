@@ -1,0 +1,30 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Profil>
+
+@{
+    ViewBag.Title = "Consultation des profils";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Liste des profils</h2>
+<div>
+    <a href="@Url.Action("Imprimer","Profil")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Libellé de profil")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LibProfil)
+        </td>
+        
+    </tr>
+}
+
+</table>

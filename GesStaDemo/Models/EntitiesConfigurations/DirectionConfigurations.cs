@@ -12,22 +12,24 @@ namespace GesStaDemo.Models.EntitiesConfigurations
         public DirectionConfigurations()
         {
             ToTable("Direction");
+            HasKey(d => d.CodDir);
             Property(d => d.CodDir)
-                .HasColumnName("Code_direction")
+                .HasColumnName("CodDir")
                 .HasColumnType("varchar")
                 .HasMaxLength(5)
                 .IsRequired();
             Property(d => d.LibDir)
-               .HasColumnName("Libelle_direction")
+               .HasColumnName("LibDir")
                .HasColumnType("varchar")
                .HasMaxLength(40)
                .IsRequired();
             Property(d => d.ActDir)
-                .HasColumnName("Action_direction")
+                .HasColumnName("Action")
                 .HasColumnType("varchar")
                 .HasMaxLength(150)
                 .IsRequired();
-            HasMany(d => d.Divisions);
+            /*HasMany(d => d.Divisions);*/
+             
         }
     }
     

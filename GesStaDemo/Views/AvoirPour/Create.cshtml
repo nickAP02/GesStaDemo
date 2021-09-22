@@ -1,0 +1,51 @@
+﻿@model GesStaDemo.Models.Entities.AvoirPour
+
+@{
+    ViewBag.Title = "Ajout d'une supervision";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.Label("Date de supervision", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DateSup, new { htmlAttributes = new { @class = "form-control", type ="date" } })
+                @Html.ValidationMessageFor(model => model.DateSup, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Superviseur", "Stagiaire", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AvoirPourSup", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.AvoirPourSup, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Stagiaire", "Superviseur", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("AvoirPourSta", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.AvoirPourSta, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Ajouter" class="btn btn-primary" />
+                <a href="" type="reset" value="" class="btn btn-default"><i class="fa fa-redo"></i></a>
+            </div>
+        </div>
+    </div>
+}
+
+

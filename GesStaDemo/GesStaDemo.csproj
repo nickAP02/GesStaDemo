@@ -45,16 +45,95 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Engine.13.0.4001\lib\net40\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ClientDoc.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommLayer.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonControls.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Controllers.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataSetConversion.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ObjectFactory.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.Prompting.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.XmlSerialize.13.0.4001\lib\net40\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportSource.13.0.4001\lib\net40\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Shared.13.0.4001\lib\net40\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentEmail.Core, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentEmail.Core.3.0.0\lib\netstandard2.0\FluentEmail.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentEmail.Smtp, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentEmail.Smtp.3.0.0\lib\netstandard2.0\FluentEmail.Smtp.dll</HintPath>
+    </Reference>
+    <Reference Include="GleamTech.Common, Version=4.5.0.0, Culture=neutral, PublicKeyToken=a05198837413a6d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\GleamTech.Common.4.5.4\lib\net40\GleamTech.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="GleamTech.DocumentUltimate, Version=5.7.0.0, Culture=neutral, PublicKeyToken=a05198837413a6d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\GleamTech.DocumentUltimate.5.9.7\lib\net40\GleamTech.DocumentUltimate.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.11.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.11\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -105,9 +184,6 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -126,11 +202,116 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\AvoirPourController.cs" />
+    <Compile Include="Controllers\DemandeController.cs" />
+    <Compile Include="Controllers\DirectionController.cs" />
+    <Compile Include="Controllers\DivisionController.cs" />
+    <Compile Include="Controllers\DroitController.cs" />
+    <Compile Include="Controllers\FluentEmailController.cs" />
+    <Compile Include="Controllers\FormationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\MaitreDeStageController.cs" />
+    <Compile Include="Controllers\MaterielController.cs" />
+    <Compile Include="Controllers\NotationController.cs" />
+    <Compile Include="Controllers\OffreController.cs" />
+    <Compile Include="Controllers\ProfilController.cs" />
+    <Compile Include="Controllers\ProvenanceController.cs" />
+    <Compile Include="Controllers\RapportController.cs" />
+    <Compile Include="Controllers\RemunerationController.cs" />
+    <Compile Include="Controllers\RemunerationsController.cs" />
+    <Compile Include="Controllers\SectionController.cs" />
+    <Compile Include="Controllers\SortirDeController.cs" />
+    <Compile Include="Controllers\StagiaireController.cs" />
+    <Compile Include="Controllers\SuperviseurController.cs" />
+    <Compile Include="Controllers\ThemeController.cs" />
+    <Compile Include="Controllers\UtilisateurController.cs" />
+    <Compile Include="Controllers\UtiliserController.cs" />
+    <Compile Include="Filters\Authentication_Filter.cs" />
+    <Compile Include="Filters\Authorization_Filter.cs" />
+    <Compile Include="Filters\ErrorHandling.cs" />
     <Compile Include="GesStaDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202109162011100_New_Startup_Database.cs" />
+    <Compile Include="Migrations\202109162011100_New_Startup_Database.Designer.cs">
+      <DependentUpon>202109162011100_New_Startup_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109171647272_Change_Type_int_TypeDeStage_to_string.cs" />
+    <Compile Include="Migrations\202109171647272_Change_Type_int_TypeDeStage_to_string.Designer.cs">
+      <DependentUpon>202109171647272_Change_Type_int_TypeDeStage_to_string.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109171722067_Add_OffreId_In_Demande.cs" />
+    <Compile Include="Migrations\202109171722067_Add_OffreId_In_Demande.Designer.cs">
+      <DependentUpon>202109171722067_Add_OffreId_In_Demande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109180802449_Remove_Offre_In_Demande.cs" />
+    <Compile Include="Migrations\202109180802449_Remove_Offre_In_Demande.Designer.cs">
+      <DependentUpon>202109180802449_Remove_Offre_In_Demande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109180840190_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int.cs" />
+    <Compile Include="Migrations\202109180840190_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int.Designer.cs">
+      <DependentUpon>202109180840190_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109181429317_Change_TypeDeStage_From_Fk_To_Attr_And_From_Int_To_Str.cs" />
+    <Compile Include="Migrations\202109181429317_Change_TypeDeStage_From_Fk_To_Attr_And_From_Int_To_Str.Designer.cs">
+      <DependentUpon>202109181429317_Change_TypeDeStage_From_Fk_To_Attr_And_From_Int_To_Str.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109181531456_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int1.cs" />
+    <Compile Include="Migrations\202109181531456_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int1.Designer.cs">
+      <DependentUpon>202109181531456_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109181740504_Add_New_Attr_Stage_Varchar_To_Demande.cs" />
+    <Compile Include="Migrations\202109181740504_Add_New_Attr_Stage_Varchar_To_Demande.Designer.cs">
+      <DependentUpon>202109181740504_Add_New_Attr_Stage_Varchar_To_Demande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109181924413_Add_Offre_In_Demande_Fk_TypeDeStage.cs" />
+    <Compile Include="Migrations\202109181924413_Add_Offre_In_Demande_Fk_TypeDeStage.Designer.cs">
+      <DependentUpon>202109181924413_Add_Offre_In_Demande_Fk_TypeDeStage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109190854568_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int11.cs" />
+    <Compile Include="Migrations\202109190854568_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int11.Designer.cs">
+      <DependentUpon>202109190854568_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int11.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109190920036_Changes_In_Demande.cs" />
+    <Compile Include="Migrations\202109190920036_Changes_In_Demande.Designer.cs">
+      <DependentUpon>202109190920036_Changes_In_Demande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109190922053_New_Changes_In_Demande.cs" />
+    <Compile Include="Migrations\202109190922053_New_Changes_In_Demande.Designer.cs">
+      <DependentUpon>202109190922053_New_Changes_In_Demande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109190958021_New_Other_Changes_In_Demande.cs" />
+    <Compile Include="Migrations\202109190958021_New_Other_Changes_In_Demande.Designer.cs">
+      <DependentUpon>202109190958021_New_Other_Changes_In_Demande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109201901211_Change_Somm_Type_Decimal_To_Double.cs" />
+    <Compile Include="Migrations\202109201901211_Change_Somm_Type_Decimal_To_Double.Designer.cs">
+      <DependentUpon>202109201901211_Change_Somm_Type_Decimal_To_Double.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109201934529_Remove_Computed_Type_On_Somme.cs" />
+    <Compile Include="Migrations\202109201934529_Remove_Computed_Type_On_Somme.Designer.cs">
+      <DependentUpon>202109201934529_Remove_Computed_Type_On_Somme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109211130028_Add_Disponible_In_Utiliser.cs" />
+    <Compile Include="Migrations\202109211130028_Add_Disponible_In_Utiliser.Designer.cs">
+      <DependentUpon>202109211130028_Add_Disponible_In_Utiliser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109211516287_Remove_Dispo_In_Utiliser_Add_To_Mat.cs" />
+    <Compile Include="Migrations\202109211516287_Remove_Dispo_In_Utiliser_Add_To_Mat.Designer.cs">
+      <DependentUpon>202109211516287_Remove_Dispo_In_Utiliser_Add_To_Mat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202109221237323_Add_DateCreation_In_Demande.cs" />
+    <Compile Include="Migrations\202109221237323_Add_DateCreation_In_Demande.Designer.cs">
+      <DependentUpon>202109221237323_Add_DateCreation_In_Demande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\EntitiesConfigurations\DroitConfigurations.cs" />
+    <Compile Include="Models\EntitiesConfigurations\DemandeConfigurations.cs" />
+    <Compile Include="Models\EntitiesConfigurations\UtilisateurConfigurations.cs" />
+    <Compile Include="Models\Entities\Droit.cs" />
     <Compile Include="Models\EntitiesConfigurations\AvoirPourConfigurations.cs" />
     <Compile Include="Models\EntitiesConfigurations\DirectionConfigurations.cs" />
     <Compile Include="Models\EntitiesConfigurations\DivisionConfigurations.cs" />
@@ -138,7 +319,6 @@
     <Compile Include="Models\EntitiesConfigurations\MaitreDeStageConfigurations.cs" />
     <Compile Include="Models\EntitiesConfigurations\MaterielConfigurations.cs" />
     <Compile Include="Models\EntitiesConfigurations\NotationConfigurations.cs" />
-    <Compile Include="Models\EntitiesConfigurations\NoteDeServiceConfigurations.cs" />
     <Compile Include="Models\EntitiesConfigurations\ProvenanceConfigurations.cs" />
     <Compile Include="Models\EntitiesConfigurations\RapportConfigurations.cs" />
     <Compile Include="Models\EntitiesConfigurations\RemunerationConfigurations.cs" />
@@ -155,7 +335,8 @@
     <Compile Include="Models\Entities\MaitreDeStage.cs" />
     <Compile Include="Models\Entities\Materiel.cs" />
     <Compile Include="Models\Entities\Notation.cs" />
-    <Compile Include="Models\Entities\NoteDeService.cs" />
+    <Compile Include="Models\Entities\Demande.cs" />
+    <Compile Include="Models\Entities\Offre.cs" />
     <Compile Include="Models\Entities\Provenance.cs" />
     <Compile Include="Models\Entities\Rapport.cs" />
     <Compile Include="Models\Entities\Remuneration.cs" />
@@ -165,9 +346,164 @@
     <Compile Include="Models\Entities\Superviseur.cs" />
     <Compile Include="Models\Entities\Theme.cs" />
     <Compile Include="Models\Entities\Utiliser.cs" />
+    <Compile Include="Models\Entities\Profil.cs" />
+    <Compile Include="Models\Entities\Utilisateur.cs" />
+    <Compile Include="Models\EntitiesConfigurations\OffreConfigurations.cs" />
+    <Compile Include="Models\Entities\Valider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Direction.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Direction.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Division.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Division.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\MaitreDeStage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MaitreDeStage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Rapport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Rapport.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Remuneration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Remuneration.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RepAccept.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepAccept.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RepDem.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepDem.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\RepOffre.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepOffre.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\ReportAccept.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportAccept.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDemande.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDemande.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDirection.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDirection.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportDivision.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDivision.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportFormation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportFormation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportMS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportMS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportNot.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportNot.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportOffre.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportOffre.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportRap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportRap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportRem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportRem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\ReportSup.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportSup.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RepSta.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepSta.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\RepThe.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RepThe.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Sup.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sup.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Report\Theme.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Theme.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\User.mdf" />
+    <Content Include="App_Data\User_log.ldf">
+      <DependentUpon>User.mdf</DependentUpon>
+    </Content>
+    <Content Include="Content\admin.css" />
+    <Content Include="Content\all.css" />
+    <Content Include="Content\bold.css" />
+    <Content Include="Content\brands.css" />
+    <Content Include="Content\Chart.css" />
+    <Content Include="Content\Chart.min.css" />
+    <Content Include="Content\fontawesome.css" />
+    <Content Include="Content\solid.css" />
+    <Content Include="fonts\Iconly---Bold.svg" />
+    <Content Include="Image\img7.jpg" />
+    <Content Include="Image\img3.jpg" />
+    <Content Include="Image\img_stage_de_perfectionnement.jpg" />
+    <Content Include="Image\img_stage_de_memoire.jpg" />
+    <Content Include="Image\img4.jpg" />
+    <Content Include="Image\img5.jpg" />
+    <Content Include="Image\img6.jpg" />
+    <Content Include="Image\img8.jpg" />
+    <Content Include="Image\img9.jpg" />
+    <Content Include="Scripts\all.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -176,8 +512,129 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\img1.jpg" />
+    <Content Include="Image\img2.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="CV\Page_de_garde.pdf" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
+    <Content Include="fonts\Iconly---Bold.eot" />
+    <Content Include="fonts\Iconly---Bold.ttf" />
+    <Content Include="fonts\Iconly---Bold.woff" />
+    <Content Include="Report\Direction.xsc">
+      <DependentUpon>Direction.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\Direction.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Direction.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\Direction.xss">
+      <DependentUpon>Direction.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\Division.xsc">
+      <DependentUpon>Division.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\Division.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Division.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\Division.xss">
+      <DependentUpon>Division.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\MaitreDeStage.xsc">
+      <DependentUpon>MaitreDeStage.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\MaitreDeStage.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MaitreDeStage.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\MaitreDeStage.xss">
+      <DependentUpon>MaitreDeStage.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\Remuneration.xsc">
+      <DependentUpon>Remuneration.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\Rapport.xsc">
+      <DependentUpon>Rapport.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\Rapport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Rapport.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\Rapport.xss">
+      <DependentUpon>Rapport.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\Remuneration.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Remuneration.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\Remuneration.xss">
+      <DependentUpon>Remuneration.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\Sup.xsc">
+      <DependentUpon>Sup.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\RepDem.xsc">
+      <DependentUpon>RepDem.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\RepAccept.xsc">
+      <DependentUpon>RepAccept.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\RepAccept.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepAccept.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\RepAccept.xss">
+      <DependentUpon>RepAccept.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\RepDem.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepDem.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\RepDem.xss">
+      <DependentUpon>RepDem.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\RepOffre.xsc">
+      <DependentUpon>RepOffre.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\RepOffre.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepOffre.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\RepOffre.xss">
+      <DependentUpon>RepOffre.xsd</DependentUpon>
+    </Content>
+    <Content Include="Report\RepThe.xsc">
+      <DependentUpon>RepThe.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\RepThe.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RepThe.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\RepThe.xss">
+      <DependentUpon>RepThe.xsd</DependentUpon>
+    </Content>
+    <None Include="Report\Sup.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Sup.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Report\Sup.xss">
+      <DependentUpon>Sup.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -197,16 +654,150 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\_LayoutPage.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\_PostulerLayout.cshtml" />
+    <Content Include="Views\Login\Stagiaire.cshtml" />
+    <Content Include="Views\Admin\Admin.cshtml" />
+    <Content Include="Views\Admin\_AdminLayout.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Login\_LoginLayout.cshtml" />
+    <Content Include="Views\Home\Error.cshtml" />
+    <Content Include="Views\Home\UnAuthorized.cshtml" />
+    <Content Include="Views\Login\Superviseur.cshtml" />
+    <Content Include="Views\Login\_LoginPartial.cshtml" />
+    <Content Include="Views\Login\_StagiaireLayout.cshtml" />
+    <Content Include="Views\Login\_SuperviseurLayout.cshtml" />
+    <Content Include="Views\Login\_MSLayout.cshtml" />
+    <Content Include="Views\Login\MaitreDeStage.cshtml" />
+    <Content Include="Views\FluentEmail\Reception.cshtml" />
+    <Content Include="Views\Direction\Create.cshtml" />
+    <Content Include="Views\Direction\Delete.cshtml" />
+    <Content Include="Views\Direction\Details.cshtml" />
+    <Content Include="Views\Direction\Edit.cshtml" />
+    <Content Include="Views\Direction\Index.cshtml" />
+    <Content Include="Views\Division\Create.cshtml" />
+    <Content Include="Views\Division\Delete.cshtml" />
+    <Content Include="Views\Division\Details.cshtml" />
+    <Content Include="Views\Division\Edit.cshtml" />
+    <Content Include="Views\Division\Index.cshtml" />
+    <Content Include="Views\Droit\Create.cshtml" />
+    <Content Include="Views\Droit\Delete.cshtml" />
+    <Content Include="Views\Droit\Details.cshtml" />
+    <Content Include="Views\Droit\Edit.cshtml" />
+    <Content Include="Views\Droit\Index.cshtml" />
+    <Content Include="Views\Formation\Create.cshtml" />
+    <Content Include="Views\Formation\Delete.cshtml" />
+    <Content Include="Views\Formation\Details.cshtml" />
+    <Content Include="Views\Formation\Edit.cshtml" />
+    <Content Include="Views\Formation\Index.cshtml" />
+    <Content Include="Views\MaitreDeStage\Create.cshtml" />
+    <Content Include="Views\MaitreDeStage\Delete.cshtml" />
+    <Content Include="Views\MaitreDeStage\Details.cshtml" />
+    <Content Include="Views\MaitreDeStage\Edit.cshtml" />
+    <Content Include="Views\MaitreDeStage\Index.cshtml" />
+    <Content Include="Views\Materiel\Create.cshtml" />
+    <Content Include="Views\Materiel\Delete.cshtml" />
+    <Content Include="Views\Materiel\Details.cshtml" />
+    <Content Include="Views\Materiel\Edit.cshtml" />
+    <Content Include="Views\Materiel\Index.cshtml" />
+    <Content Include="Views\Notation\Create.cshtml" />
+    <Content Include="Views\Notation\Delete.cshtml" />
+    <Content Include="Views\Notation\Details.cshtml" />
+    <Content Include="Views\Notation\Edit.cshtml" />
+    <Content Include="Views\Notation\Index.cshtml" />
+    <Content Include="Views\Profil\Create.cshtml" />
+    <Content Include="Views\Profil\Delete.cshtml" />
+    <Content Include="Views\Profil\Details.cshtml" />
+    <Content Include="Views\Profil\Edit.cshtml" />
+    <Content Include="Views\Profil\Index.cshtml" />
+    <Content Include="Views\Provenance\Create.cshtml" />
+    <Content Include="Views\Provenance\Delete.cshtml" />
+    <Content Include="Views\Provenance\Details.cshtml" />
+    <Content Include="Views\Provenance\Edit.cshtml" />
+    <Content Include="Views\Provenance\Index.cshtml" />
+    <Content Include="Views\Rapport\Create.cshtml" />
+    <Content Include="Views\Rapport\Delete.cshtml" />
+    <Content Include="Views\Rapport\Details.cshtml" />
+    <Content Include="Views\Rapport\Edit.cshtml" />
+    <Content Include="Views\Rapport\Index.cshtml" />
+    <Content Include="Views\Remuneration\Create.cshtml" />
+    <Content Include="Views\Remuneration\Delete.cshtml" />
+    <Content Include="Views\Remuneration\Details.cshtml" />
+    <Content Include="Views\Remuneration\Edit.cshtml" />
+    <Content Include="Views\Remuneration\Index.cshtml" />
+    <Content Include="Views\Section\Create.cshtml" />
+    <Content Include="Views\Section\Delete.cshtml" />
+    <Content Include="Views\Section\Details.cshtml" />
+    <Content Include="Views\Section\Edit.cshtml" />
+    <Content Include="Views\Section\Index.cshtml" />
+    <Content Include="Views\Stagiaire\Create.cshtml" />
+    <Content Include="Views\Stagiaire\Delete.cshtml" />
+    <Content Include="Views\Stagiaire\Details.cshtml" />
+    <Content Include="Views\Stagiaire\Edit.cshtml" />
+    <Content Include="Views\Stagiaire\Index.cshtml" />
+    <Content Include="Views\Superviseur\Create.cshtml" />
+    <Content Include="Views\Superviseur\Delete.cshtml" />
+    <Content Include="Views\Superviseur\Details.cshtml" />
+    <Content Include="Views\Superviseur\Edit.cshtml" />
+    <Content Include="Views\Superviseur\Index.cshtml" />
+    <Content Include="Views\Theme\Create.cshtml" />
+    <Content Include="Views\Theme\Delete.cshtml" />
+    <Content Include="Views\Theme\Details.cshtml" />
+    <Content Include="Views\Theme\Edit.cshtml" />
+    <Content Include="Views\Theme\Index.cshtml" />
+    <Content Include="Views\Utilisateur\Delete.cshtml" />
+    <Content Include="Views\Utilisateur\Details.cshtml" />
+    <Content Include="Views\Utilisateur\Edit.cshtml" />
+    <Content Include="Views\Utilisateur\Index.cshtml" />
+    <Content Include="Views\Utiliser\Create.cshtml" />
+    <Content Include="Views\Utiliser\Delete.cshtml" />
+    <Content Include="Views\Utiliser\Details.cshtml" />
+    <Content Include="Views\Utiliser\Edit.cshtml" />
+    <Content Include="Views\Utiliser\Index.cshtml" />
+    <Content Include="Views\Admin\Demandes.cshtml" />
+    <Content Include="Views\Demande\Create.cshtml" />
+    <Content Include="Views\Demande\Delete.cshtml" />
+    <Content Include="Views\Demande\Details.cshtml" />
+    <Content Include="Views\Demande\Edit.cshtml" />
+    <Content Include="Views\Demande\Index.cshtml" />
+    <Content Include="Views\Offre\Create.cshtml" />
+    <Content Include="Views\Offre\Delete.cshtml" />
+    <Content Include="Views\Offre\Details.cshtml" />
+    <Content Include="Views\Offre\Edit.cshtml" />
+    <Content Include="Views\Offre\Index.cshtml" />
+    <Content Include="Views\Admin\Accepter.cshtml" />
+    <Content Include="Views\Admin\Refuser.cshtml" />
+    <Content Include="Views\Admin\Voir.cshtml" />
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
+    <Content Include="Views\Admin\Valider.cshtml" />
+    <Content Include="Views\SortirDe\Create.cshtml" />
+    <Content Include="Views\SortirDe\Delete.cshtml" />
+    <Content Include="Views\SortirDe\Details.cshtml" />
+    <Content Include="Views\SortirDe\Edit.cshtml" />
+    <Content Include="Views\SortirDe\Index.cshtml" />
+    <Content Include="Views\Utilisateur\Create.cshtml" />
+    <Content Include="Views\Admin\Liste.cshtml" />
+    <Content Include="Views\AvoirPour\Create.cshtml" />
+    <Content Include="Views\AvoirPour\Edit.cshtml" />
+    <Content Include="Views\AvoirPour\Delete.cshtml" />
+    <Content Include="Views\AvoirPour\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Migrations\" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -220,6 +811,118 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documents\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202109162011100_New_Startup_Database.resx">
+      <DependentUpon>202109162011100_New_Startup_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109171647272_Change_Type_int_TypeDeStage_to_string.resx">
+      <DependentUpon>202109171647272_Change_Type_int_TypeDeStage_to_string.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109171722067_Add_OffreId_In_Demande.resx">
+      <DependentUpon>202109171722067_Add_OffreId_In_Demande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109180802449_Remove_Offre_In_Demande.resx">
+      <DependentUpon>202109180802449_Remove_Offre_In_Demande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109180840190_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int.resx">
+      <DependentUpon>202109180840190_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109181429317_Change_TypeDeStage_From_Fk_To_Attr_And_From_Int_To_Str.resx">
+      <DependentUpon>202109181429317_Change_TypeDeStage_From_Fk_To_Attr_And_From_Int_To_Str.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109181531456_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int1.resx">
+      <DependentUpon>202109181531456_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109181740504_Add_New_Attr_Stage_Varchar_To_Demande.resx">
+      <DependentUpon>202109181740504_Add_New_Attr_Stage_Varchar_To_Demande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109181924413_Add_Offre_In_Demande_Fk_TypeDeStage.resx">
+      <DependentUpon>202109181924413_Add_Offre_In_Demande_Fk_TypeDeStage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109190854568_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int11.resx">
+      <DependentUpon>202109190854568_Add_Offre_In_Demande_Fk_TypeDeStage_As_Int11.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109190920036_Changes_In_Demande.resx">
+      <DependentUpon>202109190920036_Changes_In_Demande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109190922053_New_Changes_In_Demande.resx">
+      <DependentUpon>202109190922053_New_Changes_In_Demande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109190958021_New_Other_Changes_In_Demande.resx">
+      <DependentUpon>202109190958021_New_Other_Changes_In_Demande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109201901211_Change_Somm_Type_Decimal_To_Double.resx">
+      <DependentUpon>202109201901211_Change_Somm_Type_Decimal_To_Double.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109201934529_Remove_Computed_Type_On_Somme.resx">
+      <DependentUpon>202109201934529_Remove_Computed_Type_On_Somme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109211130028_Add_Disponible_In_Utiliser.resx">
+      <DependentUpon>202109211130028_Add_Disponible_In_Utiliser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109211516287_Remove_Dispo_In_Utiliser_Add_To_Mat.resx">
+      <DependentUpon>202109211516287_Remove_Dispo_In_Utiliser_Add_To_Mat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202109221237323_Add_DateCreation_In_Demande.resx">
+      <DependentUpon>202109221237323_Add_DateCreation_In_Demande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportAccept.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportAccept.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDemande.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportDemande.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDirection.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportDirection.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportDivision.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportDivision.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportFormation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportFormation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportMS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportMS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportNot.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportNot.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportOffre.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportOffre.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportRap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportRap.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportRem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportRem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ReportSup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ReportSup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RepSta.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RepSta.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Theme.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Theme.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

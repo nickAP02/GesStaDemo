@@ -1,0 +1,27 @@
+<script>
+    var date = new Date();
+    document.getElementById("date-picker").min = date.toLocaleDateString().split('/').reverse().join('-');
+
+    function addMonths(date, months) {
+        var d = date.getDate();
+        date.setMonth(date.getMonth() + +months);
+        if (date.getDate() != d) {
+            date.setDate(0);
+        }
+        return date;
+    }
+
+    document.getElementById("date-picker").onchange = function() {
+        let d = this.value.split('-')
+        // console.log(d[0],d[1]-1,d[2])
+        // console.log(new Date(d[0],d[1]-1,d[2]))
+        // console.log()
+        document.getElementById("date-picker2").min = this.value
+        document.getElementById("date-picker2").max = addMonths(new Date(d[0], d[1] - 1, d[2]), 1).toLocaleDateString().split('/').reverse().join('-');
+    }
+</script> 
+
+
+
+
+

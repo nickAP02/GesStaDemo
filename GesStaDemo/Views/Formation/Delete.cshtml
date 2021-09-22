@@ -1,0 +1,51 @@
+﻿@model GesStaDemo.Models.Entities.Formation
+
+@{
+    ViewBag.Title = "Suppression d'une formation";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>n°@Model.IdFor</h2>
+
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Section")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Section.LibSec)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Stagiaire")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stagiaire.NomSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date d'affectation")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateAffectation)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+<div class="form-actions no-color">
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    <a href="" type="reset" value="Annuler" class="btn btn-default"><i class="fa fa-redo"></i></a>
+    <a href="@Url.Action("Index","Formation")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</div>
+        
+    }
+</div>

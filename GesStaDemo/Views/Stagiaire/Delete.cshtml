@@ -1,0 +1,134 @@
+﻿@model GesStaDemo.Models.Entities.Stagiaire
+
+@{
+    ViewBag.Title = "Suppression d'un stagiaire";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<div>
+ 
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Provenance")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Provenance.LibProv)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nom d'utilisateur")
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Utilisateur.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nom")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomSta)
+        </dd>
+
+
+        <dt>
+            @Html.DisplayName("Prénom")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrenSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Téélphone")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdrSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date de début")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DebutStage)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date de fin")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinStage)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Renouvellement")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NbRenouvel)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Somme")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Somm)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nationalité")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NatSta)
+        </dd>
+        <dt>
+            @Html.DisplayName("Sexe")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SexSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date de naissance")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateNaisSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date de naissance")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodRem)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+     <div>
+        <input type="submit" value="Supprimer" class="btn btn-danger" />
+        <a href="" type="reset" value="" class="btn btn-default"><i class="fa fa-redo"></i></a>
+        <a href="@Url.Action("Index","Stagiaire")" type="submit" value="Ajouter" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+    </div>
+}
+</div>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Utiliser>
+
+@{
+    ViewBag.Title = "Consultation des matériels";
+    Layout = "~/Views/Login/_StagiaireLayout.cshtml";
+}
+
+<h2>Vos matériels utilisés</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Libellé du matériel")
+        </th>
+        <th>
+            @Html.DisplayName("Nom du stagiaire")
+        </th>
+        <th>
+            @Html.DisplayName("Date d'emprunt")
+        </th>
+        <th>
+            @Html.DisplayName("Date de retrait")
+        </th>
+  
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Materiel.LibMat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stagiaire.NomSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateEmp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateRet)
+        </td>
+       
+        <td>
+            <a href="@Url.Action("Edit","Utiliser", new { id = item.Id})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","Utiliser", new { id =item.Id})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","Utiliser", new { id = item.Id})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+            <a href="@Url.Action("Stagiaire","Login")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Droit>
+
+@{
+    ViewBag.Title = "Consultation des droits";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Liste des droits</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Profil")
+        </th>
+        <th>
+            @Html.DisplayName("Utilisateur")
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profil.LibProfil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Utilisateur.Login)
+            </td>
+            <td>
+               <a href="@Url.Action("Edit","Droit",new { id = item.DroitId })" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a> 
+               <a href="@Url.Action("Details","Droit",new { id = item.DroitId })" class="btn btn-success"><i class="fa fa-bookmark"></i></a> 
+               <a href="@Url.Action("Delete","Droit",new { id = item.DroitId })" class="btn btn-danger"><i class="fa fa-trash"></i></a> 
+            </td>
+        </tr>
+    }
+
+</table>

@@ -12,24 +12,25 @@ namespace GesStaDemo.Models.EntitiesConfigurations
         public SectionConfigurations()
         {
             ToTable("Section");
+            HasKey(s => s.CodSec);
             Property(s => s.CodSec)
-                .HasColumnName("Code_Section")
+                .HasColumnName("CodSec")
                 .HasColumnType("varchar")
                 .HasMaxLength(5)
                 .IsRequired();
             Property(s => s.LibSec)
-                .HasColumnName("Libelle_Section")
+                .HasColumnName("Libelle")
                 .HasColumnType("varchar")
                 .HasMaxLength(40)
                 .IsRequired();
             Property(s => s.ActSec)
-                .HasColumnName("Action_Section")
+                .HasColumnName("Action")
                 .HasColumnType("varchar")
                 .HasMaxLength(150)
                 .IsRequired();
-            HasMany(s => s.Divisions);
-            HasMany(s => s.Formations);
-            HasMany(s => s.MaitreDeStages);
+            HasRequired(s => s.Division)
+                .WithMany(d => d.Sections)
+                .HasForeignKey(s => s.CodDiv);
         }
     }
 }

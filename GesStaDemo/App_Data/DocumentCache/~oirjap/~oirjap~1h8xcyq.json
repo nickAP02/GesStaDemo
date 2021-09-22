@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "oirjap",
+  "CachePdfKey": "oirjap/oirjap-npq31v.pdf",
+  "CacheXpzKey": "oirjap/oirjap-1h8xcyq.xpz",
+  "CacheInfoKey": "oirjap/oirjap-1h8xcyq.json",
+  "CacheCopyKey": "oirjap/5srntv.pdf",
+  "Document": null,
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": null,
+  "DocumentFileName": "rédaction scientifique.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "oirjap",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

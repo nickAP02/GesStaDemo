@@ -1,0 +1,42 @@
+﻿@model GesStaDemo.Models.Entities.Division
+
+@{
+    ViewBag.Title = "Détails d'une divison";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>@Model.CodDiv</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Direction")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direction.LibDir)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Libellé de la division")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibDiv)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Action")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActDiv)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Index","Division")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</p>

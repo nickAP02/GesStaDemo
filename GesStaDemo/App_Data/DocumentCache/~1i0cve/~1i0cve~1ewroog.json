@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "1i0cve",
+  "CachePdfKey": "1i0cve/1i0cve-npq31v.pdf",
+  "CacheXpzKey": "1i0cve/1i0cve-1ewroog.xpz",
+  "CacheInfoKey": "1i0cve/1i0cve-1ewroog.json",
+  "CacheCopyKey": "1i0cve/1typjai.pdf",
+  "Document": null,
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": null,
+  "DocumentFileName": "Page_de_garde.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "1i0cve",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

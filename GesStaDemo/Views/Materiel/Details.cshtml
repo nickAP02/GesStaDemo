@@ -1,0 +1,47 @@
+﻿@model GesStaDemo.Models.Entities.Materiel
+
+@{
+    ViewBag.Title = "Détails d'un matériel";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>@Model.CodMat</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Libellé du matériel")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibMat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Quantité")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantMat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Caractéristiques")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caracteristik)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Disponible)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Disponible)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Index","Materiel")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</p>

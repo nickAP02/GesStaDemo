@@ -1,0 +1,57 @@
+﻿@model GesStaDemo.Models.Entities.Theme
+
+@{
+    ViewBag.Title = "Détails";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Maître de stage")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaitreDeStage.NomMS)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Stagiaire")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stagiaire.NomSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateTheme)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Libellé du thème")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibTheme)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Objectifs)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Objectifs)
+        </dd>
+    </dl>
+</div>
+<p>
+   
+</p>

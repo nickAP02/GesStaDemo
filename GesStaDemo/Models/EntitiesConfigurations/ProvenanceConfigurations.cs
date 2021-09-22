@@ -12,25 +12,25 @@ namespace GesStaDemo.Models.EntitiesConfigurations
        public ProvenanceConfigurations()
        {
             ToTable("Provenance");
-            Property(p => p.IdProv)
-                .HasColumnName("Id_Prov")
-                .IsRequired();
+            HasKey(p => p.IdProv);
             Property(p => p.LibProv)
-                .HasColumnName("Libelle_Prov")
+                .HasColumnName("LibProv")
                 .HasColumnType("varchar")
                 .HasMaxLength(30)
                 .IsRequired();
             Property(p => p.AdrProv)
-                .HasColumnName("Adresse_Prov")
+                .HasColumnName("Email")
                 .HasColumnType("varchar")
-                .HasMaxLength(100)
+                .HasMaxLength(50)
                 .IsRequired();
             Property(p => p.VilleProv)
-                .HasColumnName("Ville_Prov")
+                .HasColumnName("VilleProv")
                 .HasColumnType("varchar")
                 .HasMaxLength(25)
                 .IsRequired();
-            HasMany(p => p.Stagiaires);
+            /*HasRequired(p => p.SortirDe)
+                .WithMany(s => s.Provenances)
+                .HasForeignKey(s => s.IdSta);*/
         }
    }
 }

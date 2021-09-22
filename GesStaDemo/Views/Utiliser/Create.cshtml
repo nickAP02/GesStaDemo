@@ -1,0 +1,55 @@
+﻿@model GesStaDemo.Models.Entities.Utiliser
+
+@{
+    var db = new GesStaDbContext();
+    //ViewBag.IdSta = new SelectList(db.Stagiaires, "IdSta", "NomSta");
+    //var IdSta = db.Stagiaires.SqlQuery<string>("select IdSta from Stagiaire as s join Utilisateur as u on s.UtilId=u.UtilId");
+    //ViewBag.IdSta = Session["IdSta"];
+    ViewBag.CodMat = new SelectList(db.Materiels, "CodMat", "LibMat");
+    ViewBag.Title = "Utiliser un matériel";
+    Layout = "~/Views/Login/_StagiaireLayout.cshtml";
+}
+
+<h2>Formulaire d'utilisation</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.Label("Date d'emprunt", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DateEmp, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+            @Html.ValidationMessageFor(model => model.DateEmp, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Date de retrait", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.DateRet, new { htmlAttributes = new { @class = "form-control", type = "date" } })
+            @Html.ValidationMessageFor(model => model.DateRet, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.CodMat, "Matériel", htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DropDownList("CodMat", null, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.CodMat, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input href="" type="submit" value="Ajouter" class="btn btn-primary" />
+            <a href="" type="reset" value="" class="btn btn-default"><i class="fa fa-redo"></i></a>
+            <a href="@Url.Action("Stagiaire","Login")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+        </div>
+    </div>
+</div>
+}

@@ -12,20 +12,23 @@ namespace GesStaDemo.Models.EntitiesConfigurations
         public RemunerationConfigurations()
         {
             ToTable("Remuneration");
+            HasKey(r => r.CodRem);
             Property(r => r.CodRem)
-                .HasColumnName("Code_Remiz")
+                .HasColumnName("CodRem")
                 .HasColumnType("varchar")
                 .HasMaxLength(10)
                 .IsRequired();
             Property(r => r.RegleMens)
-                .HasColumnName("Reglement")
-                .HasColumnType("varchar")
-                .HasMaxLength(6)
+                .HasColumnName("RegleMens")
+                .HasColumnType("decimal")
                 .IsRequired();
             Property(r => r.DateRemiz)
-                .HasColumnName("Date_Remiz")
-                .HasColumnType("datetime")
+                .HasColumnName("DateRemiz")
+                .HasColumnType("date")
                 .IsRequired();
+            HasRequired(r => r.Stagiaire)
+                 .WithMany(s => s.Remunerations)
+                 .HasForeignKey(r => r.IdSta);
         }
     }
 }

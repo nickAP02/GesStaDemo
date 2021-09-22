@@ -13,14 +13,20 @@ namespace GesStaDemo.Models.EntitiesConfigurations
         {
             ToTable("SortirDe");
             Property(s => s.DatePro)
-                .HasColumnName("Date_Prov")
+                .HasColumnName("DatePro")
                 .IsRequired();
             Property(s => s.NivoEtude)
-                .HasColumnName("Niveau")
+                .HasColumnName("NivoEtude")
                 .HasMaxLength(15)
                 .IsRequired();
-            HasMany(s => s.Provenances);
-            HasMany(s => s.Stagiaires);
+            HasRequired(s => s.Provenance)
+                .WithMany(p => p.SortirDes)
+                .HasForeignKey(s => s.IdProv)
+                .WillCascadeOnDelete(false);
+            HasRequired(s => s.Stagiaire)
+                .WithMany(s => s.SortirDes)
+                .HasForeignKey(s => s.IdSta)
+                .WillCascadeOnDelete(false);
         }
     }
 }

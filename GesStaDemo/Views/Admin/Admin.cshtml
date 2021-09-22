@@ -1,0 +1,286 @@
+﻿@{
+    ViewBag.Title = "Espace admin ";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+
+}
+<style>
+    .main ::before {
+        width: 100%;
+        height: inherit;
+        padding-right:0px;
+        padding-bottom:-10px;
+        padding-top:15px;
+    }
+    .main ::after {
+        
+         padding-left:-20px;
+        padding-right:50px;
+        padding-bottom:0px;
+        padding-top:10px;
+    }
+    .page-content
+   {
+       padding-right:15px;
+       padding-left:180px;
+   }
+   .page-heading
+   {
+       padding-left:180px;
+   }
+    #row1 {
+    }
+
+    .row {
+        align-content: space-between;
+    }
+</style>
+<div class="main"style="background-color: aliceblue;">
+
+    <div class="page-heading">
+        <h3><i class="fa fa-store-alt" style="padding-left: 10px;"></i>Statistiques</h3>
+    </div>
+    <div class="page-content">
+        <section class="row">
+            <div class="col-12 col-lg-9">
+                <div class="row">
+                    <div id="row1" class="col-6 col-lg-3 col-md-6" style="background-color:white; padding: 20px;margin: 20px; border:2px solid white; border-radius:45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="stats-icon purple">
+                                            <i class="fa fa-ad" width="55px" height="55px" style="margin-left:45px;color:white; background-color:palegreen;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Offres</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.Offre</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row2" class="col-6 col-lg-3 col-md-6" style="background-color: white;padding: 20px;margin: 25px;border: 2px solid white;border-radius: 45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="stats-icon purple">
+                                            <i class="fa fa-folder" style="color:white; background-color:lightpink;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Demandes</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.Demande</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row3" class="col-6 col-lg-3 col-md-6" style="background-color: white; padding: 20px; margin: 25px; border: 2px solid white; border-radius: 45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="stats-icon purple">
+                                            <i class="fa fa-user" style="color:white; background-color:mediumpurple;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Stagiaires</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.Stagiaire</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row4" class="col-6 col-lg-3 col-md-6" style="background-color: white; padding: 20px; margin: 25px; border: 2px solid white; border-radius: 45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="stats-icon blue">
+                                            <i class="fa fa-user" style="color:white; background-color:cadetblue;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Superviseurs</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.Superviseur</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="row5" class="col-6 col-lg-3 col-md-6" style="background-color: white; padding: 20px; margin: 25px; border: 2px solid white; border-radius: 45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="stats-icon blue">
+                                            <i class="fa fa-user" style="color:white; background-color:darkslateblue;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Utilisateurs</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.Utilisateur</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 col-md-6" style="background-color: white; padding: 20px; margin: 25px; border: 2px solid white; border-radius: 45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="stats-icon green">
+                                            <i class="fa fa-user" style="color:white; background-color:greenyellow;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Maîtres de stage</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.MaitreDeStage</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 col-md-6" style="background-color: white; padding: 20px; margin: 25px; border: 2px solid white; border-radius: 45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4" style="padding-left:45px;">
+                                        <div class="stats-icon red">
+                                            <i class="fa fa-graduation-cap" style="color:white; background-color:orangered;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Formations</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.Formation</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 col-md-6" style="background-color: white; padding: 20px; margin: 25px; border: 2px solid white; border-radius: 45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4" style="padding-left:45px;">
+                                        <div class="stats-icon">
+                                            <i class="fa fa-dollar-sign" style="color:white; background-color:chocolate;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Rémunérations</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.Remuneration</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 col-md-6" style="background-color: white; padding: 20px; margin: 25px; border: 2px solid white; border-radius: 45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4" style="padding-left:45px;">
+                                        <div class="stats-icon">
+                                            <i class="fa fa-sticky-note" style="color:white; background-color:darkblue;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Notations</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.Notation</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6 col-lg-3 col-md-6" style="background-color: white; padding: 20px; margin: 20px; border: 2px solid white; border-radius: 45px 45px;">
+                        <div class="card">
+                            <div class="card-body px-3 py-4-5">
+                                <div class="row">
+                                    <div class="col-md-4" style="padding-left:45px;">
+                                        <div class="stats-icon">
+                                            <i class="fa fa-archive" style="color:white; background-color:Highlight;"></i>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <h6 class="text-muted font-semibold">Rapports</h6>
+                                        <h6 class="font-extrabold mb-0">@ViewBag.Rapport</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="Chart1" width="300" height="250"></canvas>
+                    <canvas id="Chart2" width="400" height="250"></canvas>
+                </div>
+            </div>
+          
+            
+        </section>
+    </div>
+    
+</div>
+
+<script>
+    var ctx1 = document.getElementById('Chart1').getContext('2d');
+    var Chart1 = new Chart(ctx1, {
+        type: 'doughnut',
+        data: {
+            labels: ['Division', 'Direction', 'Section'],
+            datasets: [{
+                label: 'Totaux',
+                data: [@ViewBag.Division,@ViewBag.Direction, @ViewBag.Section],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+
+            responsive: false,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            },
+            legend: {
+                display: true  // <- the important part
+            },
+            events: [],
+
+
+        }
+    });
+    var ctx2 = document.getElementById('chart2').getContext('2d');
+    const labels = @ViewBag.Section;
+     var Chart2 = new Chart(ctx2, {
+        type: 'line',
+         data: {
+             labels: labels,
+            datasets: [{
+                label: 'Stagiaires par section',
+                data: [@ViewBag.Formation],
+                borderColor: 
+                    'rgba(255, 99, 132, 1)',
+                tension:0.1
+            }]
+        },
+    });
+</script>

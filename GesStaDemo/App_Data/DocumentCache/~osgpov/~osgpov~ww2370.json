@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "osgpov",
+  "CachePdfKey": "osgpov/osgpov-npq31v.pdf",
+  "CacheXpzKey": "osgpov/osgpov-ww2370.xpz",
+  "CacheInfoKey": "osgpov/osgpov-ww2370.json",
+  "CacheCopyKey": "osgpov/glc9sx.pdf",
+  "Document": null,
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": null,
+  "DocumentFileName": "CH 1 Les vues.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "osgpov",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

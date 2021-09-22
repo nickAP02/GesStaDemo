@@ -1,0 +1,48 @@
+﻿@model GesStaDemo.Models.Entities.AvoirPour
+
+@{
+    ViewBag.Title = "Suppression de la supervision";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Stagiaire")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stagiaire.NomSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Superviseur")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Superviseur.NomSup)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date de supervision")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateSup)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    <a href="" type="reset" value="Annuler" class="btn btn-default"><i class="fa fa-redo"></i></a>
+    <a href="@Url.Action("Index","AvoirPour")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i>
+
+</div>
+    }
+</div>

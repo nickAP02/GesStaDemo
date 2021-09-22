@@ -1,0 +1,59 @@
+﻿@model GesStaDemo.Models.Entities.Superviseur
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Superviseur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Nom d'utilisateur")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Utilisateur.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nom")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomSup)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Prénom")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrenSup)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdrSup)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Numero de téléphone")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelSup)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Index","Superviseur")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</p>

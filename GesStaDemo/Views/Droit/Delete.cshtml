@@ -1,0 +1,43 @@
+﻿@model GesStaDemo.Models.Entities.Droit
+
+@{
+    ViewBag.Title = "Suppression d'un droit";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>n°@Model.DroitId</h2>
+
+<div>
+   
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Profil")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profil.LibProfil)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Utilisateur")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Utilisateur.Login)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    <a href="" type="reset" value="" class="btn btn-default"><i class="fa fa-redo"></i></a>
+    <a href="@Url.Action("Index","Droit")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+
+</div>
+    }
+</div>

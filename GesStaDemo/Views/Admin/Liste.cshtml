@@ -1,0 +1,52 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Offre>
+
+@{
+    ViewBag.Title = "Liste";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Liste des offres</h2>
+<div>
+    <a href="@Url.Action("Offres","Admin")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Stage")
+        </th>
+        <th>
+            @Html.DisplayName("Date de début")
+        </th>
+        <th>
+            @Html.DisplayName("Date de fin")
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remunerer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LibOffre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem =>item.DebutStage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinStage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Remunerer)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","Offre", new {  id = item.OffreId})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","Offre", new {  id = item.OffreId})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","Offre", new {  id = item.OffreId})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,18 @@
+﻿@{ ViewBag.Title = "_LoginPartial";}
+@if (!string.IsNullOrEmpty(Convert.ToString(Session["Login"])))
+{
+    using (Html.BeginForm("Deconnexion", "Login", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+        @Html.AntiForgeryToken()
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Bienvenue : @Session["Login"]</a></li>
+            <li>@Html.ActionLink("Deconnexion", "Deconnexion", "Login") </li>
+        </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Connexion", "Login", "Login", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

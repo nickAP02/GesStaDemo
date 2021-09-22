@@ -11,6 +11,7 @@ namespace GesStaDemo.Models.Entities
         public string NomRapp { get; set; }
         public string Taches { get; set; }
         public DateTime DatePresentat { get; set; }
+       
         public virtual ICollection<Notation> Notations { get; set; }
     }
 }

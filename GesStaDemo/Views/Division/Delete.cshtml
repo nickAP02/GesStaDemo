@@ -1,0 +1,51 @@
+﻿@model GesStaDemo.Models.Entities.Division
+
+@{
+    ViewBag.Title = "Suppression d'une division";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>@Model.CodDiv</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Direction")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Direction.LibDir)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Libellé de la division")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibDiv)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Action")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActDiv)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    <a href="" type="reset" value="" class="btn btn-default"><i class="fa fa-redo"></i></a>
+    <a href="@Url.Action("Index","Division")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+
+</div>
+       
+    }
+</div>

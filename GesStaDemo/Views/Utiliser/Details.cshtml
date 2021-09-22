@@ -1,0 +1,49 @@
+﻿@model GesStaDemo.Models.Entities.Utiliser
+
+@{
+    ViewBag.Title = "Détails du matériel utilisé";
+    Layout = "~/Views/Login/_StagiaireLayout.cshtml";
+}
+
+
+
+<div>
+  
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Libellé du matériel")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Materiel.LibMat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Nom du stagiaire")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stagiaire.NomSta)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date d'emprunt")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateEmp)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Date de retrait")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateRet)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Index","Utiliser")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</p>

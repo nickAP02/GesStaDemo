@@ -1,0 +1,56 @@
+﻿@model GesStaDemo.Models.Entities.Materiel
+
+@{
+    ViewBag.Title = "Suppression d'un matériel";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>n°@Model.CodMat</h2>
+
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Libellé du matériel")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibMat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Quantité")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.QuantMat)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Caractéristiques")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Caracteristik)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Disponible)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Disponible)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    <a href="" type="reset" value="" class="btn btn-default"><i class="fa fa-redo"></i></a>
+    <a href="@Url.Action("Index","Materiel")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</div>
+    }
+</div>

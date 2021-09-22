@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "xqnkva",
+  "CachePdfKey": "xqnkva/xqnkva-npq31v.pdf",
+  "CacheXpzKey": "xqnkva/xqnkva-1catapm.xpz",
+  "CacheInfoKey": "xqnkva/xqnkva-1catapm.json",
+  "CacheCopyKey": "xqnkva/t4jxb6.pdf",
+  "Document": null,
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": null,
+  "DocumentFileName": "CH1_Introduction à la plateforme ARDUINO.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "xqnkva",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

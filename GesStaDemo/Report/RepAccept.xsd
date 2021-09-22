@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RepAccept" targetNamespace="http://tempuri.org/RepAccept.xsd" xmlns:mstns="http://tempuri.org/RepAccept.xsd" xmlns="http://tempuri.org/RepAccept.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="GesStaDbContext" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="GesStaDbContext (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.GesStaDbContext.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ReportAcceptTableAdapter" GeneratorDataComponentClassName="ReportAcceptTableAdapter" Name="ReportAccept" UserDataComponentName="ReportAcceptTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="GesStaDbContext (Web.config)" DbObjectName="GesSta.dbo.ReportAccept" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Nom, Prenom, Sexe, Date_naissance, Nationalite, Telephone, Email, LibOffre, Debut, Fin FROM dbo.ReportAccept</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Nom" DataSetColumn="Nom" />
+              <Mapping SourceColumn="Prenom" DataSetColumn="Prenom" />
+              <Mapping SourceColumn="Sexe" DataSetColumn="Sexe" />
+              <Mapping SourceColumn="Date_naissance" DataSetColumn="Date_naissance" />
+              <Mapping SourceColumn="Nationalite" DataSetColumn="Nationalite" />
+              <Mapping SourceColumn="Telephone" DataSetColumn="Telephone" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="LibOffre" DataSetColumn="LibOffre" />
+              <Mapping SourceColumn="Debut" DataSetColumn="Debut" />
+              <Mapping SourceColumn="Fin" DataSetColumn="Fin" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RepAccept" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RepAccept" msprop:Generator_UserDSName="RepAccept">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReportAccept" msprop:Generator_TableClassName="ReportAcceptDataTable" msprop:Generator_TableVarName="tableReportAccept" msprop:Generator_TablePropName="ReportAccept" msprop:Generator_RowDeletingName="ReportAcceptRowDeleting" msprop:Generator_RowChangingName="ReportAcceptRowChanging" msprop:Generator_RowEvHandlerName="ReportAcceptRowChangeEventHandler" msprop:Generator_RowDeletedName="ReportAcceptRowDeleted" msprop:Generator_UserTableName="ReportAccept" msprop:Generator_RowChangedName="ReportAcceptRowChanged" msprop:Generator_RowEvArgName="ReportAcceptRowChangeEvent" msprop:Generator_RowClassName="ReportAcceptRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Nom" msprop:Generator_ColumnVarNameInTable="columnNom" msprop:Generator_ColumnPropNameInRow="Nom" msprop:Generator_ColumnPropNameInTable="NomColumn" msprop:Generator_UserColumnName="Nom">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Prenom" msprop:Generator_ColumnVarNameInTable="columnPrenom" msprop:Generator_ColumnPropNameInRow="Prenom" msprop:Generator_ColumnPropNameInTable="PrenomColumn" msprop:Generator_UserColumnName="Prenom">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sexe" msprop:Generator_ColumnVarNameInTable="columnSexe" msprop:Generator_ColumnPropNameInRow="Sexe" msprop:Generator_ColumnPropNameInTable="SexeColumn" msprop:Generator_UserColumnName="Sexe">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_naissance" msprop:Generator_ColumnVarNameInTable="columnDate_naissance" msprop:Generator_ColumnPropNameInRow="Date_naissance" msprop:Generator_ColumnPropNameInTable="Date_naissanceColumn" msprop:Generator_UserColumnName="Date_naissance" type="xs:dateTime" />
+              <xs:element name="Nationalite" msprop:Generator_ColumnVarNameInTable="columnNationalite" msprop:Generator_ColumnPropNameInRow="Nationalite" msprop:Generator_ColumnPropNameInTable="NationaliteColumn" msprop:Generator_UserColumnName="Nationalite">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Telephone" msprop:Generator_ColumnVarNameInTable="columnTelephone" msprop:Generator_ColumnPropNameInRow="Telephone" msprop:Generator_ColumnPropNameInTable="TelephoneColumn" msprop:Generator_UserColumnName="Telephone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_UserColumnName="Email">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LibOffre" msprop:Generator_ColumnVarNameInTable="columnLibOffre" msprop:Generator_ColumnPropNameInRow="LibOffre" msprop:Generator_ColumnPropNameInTable="LibOffreColumn" msprop:Generator_UserColumnName="LibOffre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Debut" msprop:Generator_ColumnVarNameInTable="columnDebut" msprop:Generator_ColumnPropNameInRow="Debut" msprop:Generator_ColumnPropNameInTable="DebutColumn" msprop:Generator_UserColumnName="Debut" type="xs:dateTime" />
+              <xs:element name="Fin" msprop:Generator_ColumnVarNameInTable="columnFin" msprop:Generator_ColumnPropNameInRow="Fin" msprop:Generator_ColumnPropNameInTable="FinColumn" msprop:Generator_UserColumnName="Fin" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

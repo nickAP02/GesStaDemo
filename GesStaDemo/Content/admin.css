@@ -1,0 +1,124 @@
+﻿/*/.sidebar {
+    position: absolute;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: cornflowerblue;
+}
+
+.sidebar-wrapper {
+    height: 100%;
+    position: absolute;
+}
+
+.sidebar-menu {
+    height: 100%;
+    width: 300px;
+    border-bottom: 100px;
+}
+
+.sidebar-header {
+    font-size: 22px;
+    text-align: center;
+    line-height: 70px;
+    background-color: #7bc5e1;
+}
+
+.sidebar-title {
+    color: whitesmoke;
+    font-size: 22px;
+    padding-left: 40px;
+}
+
+.sidebar-item {
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 65px;
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255,255,255,.1);
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    transition: .4s;
+}
+
+menu {
+}
+
+div ul :hover a {
+    padding-left: 50px;
+    text-decoration: none;
+}
+
+.sidebar div li a {
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    position: center;
+    justify-content: center;
+    width: 100%;
+}
+
+    body ::before {
+        font-family: serif;
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/* .page-content {
+            padding-top:400px;
+            margin-right: inherit;
+            justify-content: center;
+            align-content: center;
+            width: inherit;
+            height: calc(600px - inherit);
+            position: center;
+            padding-bottom: 200px;
+            margin-top: 400px;
+        }
+
+        section{
+            padding-right: 100px;
+            padding-left: 300px;
+            margin: 200px;
+            margin-right: 100px;
+        }
+footer {
+    padding: 20px;
+    border-bottom: 100px;
+}
+*/
+#voir .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

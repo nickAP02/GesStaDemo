@@ -1,0 +1,43 @@
+﻿@model GesStaDemo.Models.Entities.Direction
+
+@{
+    ViewBag.Title = "Suppression d'une direction";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>@Model.CodDir</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayName("Libellé de la direction")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibDir)
+        </dd>
+
+        <dt>
+            @Html.DisplayName("Action")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ActDir)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    <a href="" type="reset" value="Annuler" class="btn btn-default"><i class="fa fa-redo"></i></a>
+    <a href="@Url.Action("Index","Direction")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</div>
+       
+    }
+</div>

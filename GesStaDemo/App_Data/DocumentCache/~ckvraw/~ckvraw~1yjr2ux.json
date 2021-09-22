@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "ckvraw",
+  "CachePdfKey": "ckvraw/ckvraw-npq31v.pdf",
+  "CacheXpzKey": "ckvraw/ckvraw-1yjr2ux.xpz",
+  "CacheInfoKey": "ckvraw/ckvraw-1yjr2ux.json",
+  "CacheCopyKey": "ckvraw/1x2q0dm.pdf",
+  "Document": null,
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": null,
+  "DocumentFileName": "NetAcad Learning Transcript.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "ckvraw",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

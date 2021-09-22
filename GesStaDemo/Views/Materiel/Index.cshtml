@@ -1,0 +1,51 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Materiel>
+
+@{
+    ViewBag.Title = "Consultation des matériels";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Liste des matériels</h2>
+<div>
+    <a href="@Url.Action("Imprimer","Materiel")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Libellé du matériel")
+        </th>
+        <th>
+            @Html.DisplayName("Quantité")
+        </th>
+        <th>
+            @Html.DisplayName("Caractéristiques")
+        </th>
+        <th>
+            @Html.DisplayName("Disponible")
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.LibMat)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.QuantMat)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Caracteristik)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Disponible)
+    </td>
+    <td>
+        <a href="@Url.Action("Edit","Materiel", new { id = item.CodMat})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+        <a href="@Url.Action("Details","Materiel", new { id =item.CodMat})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+        <a href="@Url.Action("Delete","Materiel", new { id = item.CodMat})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+    </td>
+</tr>
+}
+
+</table>

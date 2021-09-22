@@ -1,0 +1,82 @@
+﻿@model GesStaDemo.Models.Entities.Offre
+
+@{
+    ViewBag.Title = "Ajouter une offre";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Nouvelle offre</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.Label("Stage", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LibOffre, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LibOffre, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Date de début", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DebutStage, new { htmlAttributes = new { @class = "form-control", id = "date-picker", type = "date" } })
+                @Html.ValidationMessageFor(model => model.DebutStage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Date de fin", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.FinStage, new { htmlAttributes = new { @class = "form-control", id = "date-picker2", type = "date" } })
+                @Html.ValidationMessageFor(model => model.FinStage, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Rémunérer", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox" style="margin-left:50px;">
+                    @Html.EditorFor(model => model.Remunerer)
+                    @Html.ValidationMessageFor(model => model.Remunerer, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input href="" type="submit" value="Ajouter" class="btn btn-primary" />
+                <a href="" type="reset" value="Ajouter" class="btn btn-default"><i class="fa fa-redo"></i></a>
+            </div>
+        </div>
+    </div>
+}
+<!--<script>
+    var date = new Date();
+    document.getElementById("date-picker").min = date.toLocaleDateString().split('/').reverse().join('-');
+
+    function addMonths(date, months) {
+        var d = date.getDate();
+        date.setMonth(date.getMonth() + +months);
+        if (date.getDate() != d) {
+            date.setDate(0);
+        }
+        return date;
+    }
+
+    document.getElementById("date-picker").onchange = function () {
+        let d = this.value.split('-')
+        // console.log(d[0],d[1]-1,d[2])
+        // console.log(new Date(d[0],d[1]-1,d[2]))
+        // console.log()
+        document.getElementById("date-picker2").min = this.value
+        document.getElementById("date-picker2").max = addMonths(new Date(d[0], d[1] - 1, d[2]), 1).toLocaleDateString().split('/').reverse().join('-');
+    }
+</script>-->

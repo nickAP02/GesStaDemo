@@ -1,0 +1,64 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Notation>
+
+@{
+    ViewBag.Title = "Consultation d'une notation";
+    
+}
+
+<h2>Liste des notations</h2>
+<div>
+    <a href="@Url.Action("Imprimer","Notation")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Note du rapport")
+        </th>
+        <th>
+            @Html.DisplayName("Observation")
+        </th>
+        <th>
+            @Html.DisplayName("Date de notation")
+        </th>
+        <th>
+            @Html.DisplayName("Stagiaire")
+        </th>
+        <th>
+            @Html.DisplayName("Maître de stage")
+        </th>
+        <th>
+            @Html.DisplayName("Rapport")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotRapp)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ObserEval)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateNot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodMS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodRapp)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","Materiel", new { id = item.IdNot})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","Materiel", new { id =item.IdNot})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","Materiel", new { id = item.IdNot})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -12,21 +12,22 @@ namespace GesStaDemo.Models.EntitiesConfigurations
         public MaterielConfigurations()
         {
             ToTable("Materiel");
+            HasKey(m => m.CodMat);
             Property(m => m.CodMat)
-               .HasColumnName("Code_Mat")
+               .HasColumnName("CodMat")
                .HasColumnType("varchar")
                .HasMaxLength(10)
                .IsRequired();
             Property(m => m.LibMat)
-               .HasColumnName("Libelle_Mat")
+               .HasColumnName("LibMat")
                .HasColumnType("varchar")
                .HasMaxLength(25)
                .IsRequired();
             Property(m => m.QuantMat)
-               .HasColumnName("Quantite_Mat")
+               .HasColumnName("QuantMat")
                .IsRequired();
             Property(m => m.Caracteristik)
-               .HasColumnName("Caracteristik_Mat")
+               .HasColumnName("Caracteristik")
                .HasColumnType("varchar")
                .HasMaxLength(100)
                .IsRequired();

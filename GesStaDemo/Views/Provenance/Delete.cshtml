@@ -1,0 +1,47 @@
+﻿@model GesStaDemo.Models.Entities.Provenance
+
+@{
+    ViewBag.Title = "Suppression d'une provenance";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LibProv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LibProv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdrProv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AdrProv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VilleProv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VilleProv)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Supprimer" class="btn btn-danger" />
+    <a href="" type="reset" value="" class="btn btn-default"><i class="fa fa-redo"></i></a>
+    <a href="@Url.Action("Index","Provenance")" type="submit" value="" class="btn btn-default"><i class="fa fa-arrow-left"></i></a>
+</div>
+    }
+</div>

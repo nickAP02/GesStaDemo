@@ -1,0 +1,46 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Formation>
+
+@{
+    ViewBag.Title = "Consultation d'une formation";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Liste des formations</h2>
+<div>
+    <a href="@Url.Action("Imprimer","Formation")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Libellé de la section")
+        </th>
+        <th>
+            @Html.DisplayName("Nom du stagiaire")
+        </th>
+        <th>
+            @Html.DisplayName("Date d'affectation")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Section.LibSec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Stagiaire.NomSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateAffectation)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","Formation", new { id = item.IdFor})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","Formation", new { id =item.IdFor})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","Formation", new { id = item.IdFor})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

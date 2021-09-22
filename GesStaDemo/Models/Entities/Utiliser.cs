@@ -7,9 +7,12 @@ namespace GesStaDemo.Models.Entities
 {
     public class Utiliser
     {
+        public int Id { get; set; }
         public DateTime DateEmp { get; set; }
         public DateTime DateRet { get; set; }
-        public virtual ICollection<Stagiaire> Stagiaires { get; set; }
-        public virtual ICollection<Materiel> Materiels { get; set; }
+        public int IdSta { get; set; }
+        public virtual Stagiaire Stagiaire { get; set; }
+        public string CodMat { get; set; }
+        public virtual Materiel Materiel { get; set; }
     }
 }

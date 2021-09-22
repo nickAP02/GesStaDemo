@@ -1,0 +1,111 @@
+﻿@model IEnumerable<GesStaDemo.Models.Entities.Stagiaire>
+
+@{
+    ViewBag.Title = "Consultation des stagiaires";
+    Layout = "~/Views/Admin/_AdminLayout.cshtml";
+}
+
+<h2>Liste des stagiaires enregistrés</h2>
+<div>
+    <a href="@Url.Action("Imprimer","Stagiaire")" style="text-decoration:none;">Imprimer<i class="fa fa-print"></i></a>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayName("Provenance")
+        </th>
+        <th>
+            @Html.DisplayName("Code utilisateur")
+        </th>
+        <th>
+            @Html.DisplayName("Nom")
+        </th>
+        <th>
+            @Html.DisplayName("Prénom")
+        </th>
+        <th>
+            @Html.DisplayName("Téléphone")
+        </th>
+        <th>
+            @Html.DisplayName("Email")
+        </th>
+        <th>
+            @Html.DisplayName("Début de stage")
+        </th>
+        <th>
+            @Html.DisplayName("Fin de stage")
+        </th>
+        <th>
+            @Html.DisplayName("Renouvellement")
+        </th>
+        <th>
+            @Html.DisplayName("Somme")
+        </th>
+        <th>
+            @Html.DisplayName("Nationalité")
+        </th>
+        <th>
+            @Html.DisplayName("Sexe")
+        </th>
+        <th>
+            @Html.DisplayName("Date de naissance")
+        </th>
+        <th>
+            @Html.DisplayName("Code de rémunération")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Provenance.LibProv)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Utilisateur.Login)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrenSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdrSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DebutStage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinStage)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NbRenouvel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Somm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NatSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SexSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateNaisSta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodRem)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit","Stagiaire", new { id = item.IdSta})" class="btn btn-primary"><i class="fa fa-pen-alt"></i></a>
+            <a href="@Url.Action("Details","Stagiaire", new { id = item.IdSta})" class="btn btn-success"><i class="fa fa-bookmark"></i></a>
+            <a href="@Url.Action("Delete","Stagiaire", new { id = item.IdSta})" class="btn btn-danger"><i class="fa fa-trash"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

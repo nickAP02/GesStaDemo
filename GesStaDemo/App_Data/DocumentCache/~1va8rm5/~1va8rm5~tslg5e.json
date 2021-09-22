@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "1va8rm5",
+  "CachePdfKey": "1va8rm5/1va8rm5-npq31v.pdf",
+  "CacheXpzKey": "1va8rm5/1va8rm5-tslg5e.xpz",
+  "CacheInfoKey": "1va8rm5/1va8rm5-tslg5e.json",
+  "CacheCopyKey": "1va8rm5/bqzb7m.pdf",
+  "Document": null,
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": null,
+  "DocumentFileName": "MaPageDeGarde.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "1va8rm5",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

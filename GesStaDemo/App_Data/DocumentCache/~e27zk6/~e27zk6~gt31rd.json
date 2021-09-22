@@ -1,0 +1,29 @@
+{
+  "CacheSourceKey": "e27zk6",
+  "CachePdfKey": "e27zk6/e27zk6-npq31v.pdf",
+  "CacheXpzKey": "e27zk6/e27zk6-gt31rd.xpz",
+  "CacheInfoKey": "e27zk6/e27zk6-gt31rd.json",
+  "CacheCopyKey": null,
+  "Document": "Page_de_garde.pdf",
+  "DocumentHandlerType": null,
+  "DocumentHandlerParameters": null,
+  "DocumentLocation": "~\\CV",
+  "DocumentFileName": "Page_de_garde.pdf",
+  "InputOptions": {
+    "Format": "Pdf",
+    "Password": null
+  },
+  "PdfOutputOptions": {
+    "Watermarks": [],
+    "FastWebViewEnabled": false,
+    "Password": null,
+    "Attachments": [],
+    "Format": "Pdf"
+  },
+  "XpzOutputOptions": {
+    "Password": "e27zk6",
+    "HighQualityEnabled": false,
+    "Format": "Xpz"
+  },
+  "Attachments": []
+}

@@ -7,8 +7,17 @@ namespace GesStaDemo.Models.Entities
 {
     public class AvoirPour
     {
+      /* public AvoirPour()
+        {
+            Superviseurs = new HashSet<Superviseur>();
+            Stagiaires = new HashSet<Stagiaire>();
+        }*/
+        public int Id { get; set; }
         public DateTime DateSup { get; set; }
-        public virtual ICollection<Superviseur> Superviseurs { get; set; }
-        public virtual ICollection<Stagiaire> Stagiaires { get; set; }
+        public int AvoirPourSup { get; set; }
+        public virtual Stagiaire Stagiaire { get; set; }
+        public int AvoirPourSta { get; set; }
+        public virtual Superviseur Superviseur { get; set; }
+        
     }
 }
